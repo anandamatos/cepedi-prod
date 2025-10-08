@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Ensino - Front-End com React</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define a fonte Inter como padrão */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estilo para a transição suave do ícone do acordeão */
+        .accordion-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <!-- Header -->
+    <header class="bg-orange-600 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+                Desenvolvimento Front-End com React
+            </h1>
+            <p class="text-orange-100 mt-1">Plano de Ensino Detalhado</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Seção de Informações Gerais -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <!-- Card Carga Horária -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-orange-500 col-span-1">
+                <h2 class="text-xl font-bold text-slate-800 mb-3">Carga Horária Total</h2>
+                <div class="flex items-center text-4xl font-bold text-orange-500">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-clock-fill mr-3" viewBox="0 0 16 16">
+                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    </svg>
+                    200 <span class="text-2xl text-slate-500 ml-2">horas</span>
+                </div>
+                <ul class="mt-4 space-y-2 text-slate-600">
+                    <li><span class="font-semibold">Teórica:</span> 144 horas</li>
+                    <li><span class="font-semibold">Prática:</span> 56 horas</li>
+                </ul>
+            </div>
+
+            <!-- Card Ementa -->
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-sky-500 col-span-1 md:col-span-2">
+                <h2 class="text-xl font-bold text-slate-800 mb-3">Ementa do Curso</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Lógica de Programação com JavaScript. Noções de UX. Programação e Orientação a Objetos. HTML + CSS. React. Web Services. Soft Skills. Git.
+                </p>
+            </div>
+        </div>
+
+        <!-- Seção Cronograma de Aulas -->
+        <div>
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 border-b-2 border-slate-200 pb-2">Cronograma de Aulas</h2>
+            <div class="space-y-4">
+                
+                <!-- Acordeão Módulos -->
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 1 - Lógica de Programação com JavaScript (8 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 1:</span> Pensamento Computacional e Algoritmos</li>
+                            <li><span class="font-semibold">Aula 2:</span> Variáveis, Tipos de Dados e Operadores</li>
+                            <li><span class="font-semibold">Aula 3:</span> Estruturas Condicionais</li>
+                            <li><span class="font-semibold">Aula 4:</span> Estruturas de Repetição</li>
+                            <li><span class="font-semibold">Aula 5:</span> Listas (Arrays)</li>
+                            <li><span class="font-semibold">Aula 6:</span> Funções e Escopo</li>
+                            <li><span class="font-semibold">Aula 7:</span> Objetos e Manipulação de Dados</li>
+                            <li><span class="font-semibold">Aula 8:</span> Manipulação do DOM</li>
+                            <li><a href="mod1_logica-js" style="color: #0056b3; font-weight: bold;"><span class="font-semibold" >Exercicios:</span> Índice de Exercícios</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 2 – UX (User Experience) (4 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                           <li><span class="font-semibold">Aula 9:</span> Fundamentos de UX e UI</li>
+                           <li><span class="font-semibold">Aula 10:</span> Pesquisa com Usuários e Definição de Personas</li>
+                           <li><span class="font-semibold">Aula 11:</span> Arquitetura da Informação e Fluxos de Usuário</li>
+                           <li><span class="font-semibold">Aula 12:</span> Prototipação e Testes de Usabilidade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 3 – Programação e Orientação a Objetos (6 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 13:</span> Paradigmas de Programação e POO</li>
+                            <li><span class="font-semibold">Aula 14:</span> Classes e Objetos</li>
+                            <li><span class="font-semibold">Aula 15:</span> Herança e Polimorfismo</li>
+                            <li><span class="font-semibold">Aula 16:</span> Encapsulamento e Abstração</li>
+                            <li><span class="font-semibold">Aula 17:</span> Módulos e exports/imports</li>
+                            <li><span class="font-semibold">Aula 18:</span> Programação Assíncrona (Promises, async/await)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 4 – HTML + CSS (6 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                         <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 19:</span> Estrutura Semântica com HTML5</li>
+                            <li><span class="font-semibold">Aula 20:</span> Estilização com CSS3 (Seletores, Box Model, Cores)</li>
+                            <li><span class="font-semibold">Aula 21:</span> Layouts com Flexbox</li>
+                            <li><span class="font-semibold">Aula 22:</span> Layouts com Grid</li>
+                            <li><span class="font-semibold">Aula 23:</span> Responsividade e Media Queries</li>
+                            <li><span class="font-semibold">Aula 24:</span> Frameworks CSS (Introdução ao Tailwind)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 5 – React (12 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                         <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 25:</span> Introdução ao React e Ecossistema</li>
+                            <li><span class="font-semibold">Aula 26:</span> Componentes, JSX e Props</li>
+                            <li><span class="font-semibold">Aula 27:</span> Estado (State) e Ciclo de Vida</li>
+                            <li><span class="font-semibold">Aula 28:</span> Hooks (useState, useEffect)</li>
+                            <li><span class="font-semibold">Aula 29:</span> Renderização Condicional e Listas</li>
+                            <li><span class="font-semibold">Aula 30:</span> Formulários e Eventos</li>
+                            <li><span class="font-semibold">Aula 31:</span> Hooks Avançados (useContext, useReducer)</li>
+                            <li><span class="font-semibold">Aula 32:</span> Gerenciamento de Estado com Context API</li>
+                            <li><span class="font-semibold">Aula 33:</span> Roteamento com React Router</li>
+                            <li><span class="font-semibold">Aula 34:</span> Estilização de Componentes (Styled Components)</li>
+                            <li><span class="font-semibold">Aula 35:</span> Consumo de APIs com Fetch/Axios</li>
+                            <li><span class="font-semibold">Aula 36:</span> Testes em React (Jest, React Testing Library)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 6 - Web Services (4 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                         <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 37:</span> Introdução a APIs e Web Services</li>
+                            <li><span class="font-semibold">Aula 38:</span> Padrão REST e Métodos HTTP</li>
+                            <li><span class="font-semibold">Aula 39:</span> Autenticação (Tokens, JWT)</li>
+                            <li><span class="font-semibold">Aula 40:</span> Ferramentas (Postman, Insomnia)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 7 - Soft Skills (4 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                         <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 41:</span> Comunicação Assertiva e Feedback</li>
+                            <li><span class="font-semibold">Aula 42:</span> Trabalho em Equipe e Metodologias Ágeis</li>
+                            <li><span class="font-semibold">Aula 43:</span> Resolução de Conflitos e Negociação</li>
+                            <li><span class="font-semibold">Aula 44:</span> Gestão de Carreira e Aprendizagem Contínua</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors">
+                        <span>Módulo 8 - Git (4 aulas)</span>
+                        <svg class="accordion-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                    </button>
+                    <div class="accordion-content hidden p-5 border-t border-slate-200">
+                         <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><span class="font-semibold">Aula 45:</span> Fundamentos de Controle de Versão com Git</li>
+                            <li><span class="font-semibold">Aula 46:</span> Comandos Essenciais (commit, push, pull, branch)</li>
+                            <li><span class="font-semibold">Aula 47:</span> Fluxos de Trabalho (Gitflow)</li>
+                            <li><span class="font-semibold">Aula 48:</span> Colaboração com GitHub (Pull Requests, Code Review)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Lógica para o componente de acordeão
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+
+                    // Fecha todos os outros acordeões
+                    document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            otherHeader.nextElementSibling.classList.add('hidden');
+                            otherHeader.querySelector('.accordion-icon').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Abre ou fecha o acordeão clicado
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Abre o primeiro módulo por padrão
+            if (accordionHeaders.length > 0) {
+                accordionHeaders[0].click();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
