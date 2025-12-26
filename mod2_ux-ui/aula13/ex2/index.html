@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Teste de Usabilidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Exercícios de UX Research</h1>
+
+    <div class="exercicio">
+        <h2>✅ EXERCÍCIO 2: Elaboração de Tarefa de Teste</h2>
+        <p>Este exercício foca na criação de um cenário de teste para avaliar a experiência do usuário em um fluxo crítico de conversão.</p>
+        
+        <h3>Objetivo do Teste</h3>
+        <p>Avaliar a <strong>eficiência e a clareza</strong> do processo de <strong>finalização de compra (checkout)</strong> em um aplicativo de delivery de comida, identificando pontos de atrito que possam levar ao abandono do carrinho.</p>
+
+        <div class="passo">
+            <strong>Tarefa Específica:</strong> "Você acabou de se mudar para um novo apartamento. Use o aplicativo para pedir uma pizza de calabresa e uma bebida para entregar neste seu novo endereço, pagando com um cartão de crédito."
+        </div>
+
+        <div class="passo">
+            <strong>Cenário Contextualizado:</strong> "Imagine que é um sábado à noite e você quer pedir uma pizza. Você já está logado no aplicativo e tem um cartão de crédito salvo. Seu novo endereço é: <strong>Rua das Flores, 123, Apto 45</strong>. Você precisa adicionar este endereço pela primeira vez durante o pedido."
+        </div>
+    </div>
+
+    <div class="exercicio">
+        <h2>📊 PERGUNTAS PÓS-TAREFA</h2>
+        <p>Utilizadas para a coleta de dados qualitativos após a interação do usuário com o protótipo ou sistema.</p>
+
+        <div class="algoritmo">
+            <h4>Questionário Qualitativo:</h4>
+            <ul>
+                <li><strong>FACILIDADE:</strong> Em uma escala de 1 (muito difícil) a 5 (muito fácil), como você classifica a dificuldade de adicionar um novo endereço de entrega durante o pedido? Por quê?</li>
+                <li><strong>ATRITO:</strong> Havia alguma informação durante o pagamento que lhe causou dúvida ou hesitação? Se sim, qual?</li>
+                <li><strong>FEEDBACK:</strong> Descreva com suas palavras: como você teve certeza de que o pedido foi realmente concluído com sucesso?</li>
+                <li><strong>RECUPERAÇÃO:</strong> O que você faria se, após finalizar, percebesse que escolheu o sabor errado da pizza?</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

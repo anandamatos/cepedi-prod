@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de E-commerce e UX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #0056b3;
+        }
+        .status-tag {
+            font-weight: bold;
+            color: #d9534f; /* Cor para destaque de erros/alertas */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Análise de Experiência do Usuário (UX)</h1>
+
+    <div class="exercicio">
+        <h2>✅ EXERCÍCIO 1: ANÁLISE DE CENÁRIO DE E-COMMERCE</h2>
+        <p>Para testar um protótipo de aplicativo de e-commerce de forma eficaz, focamos nas jornadas mais críticas para o negócio, simulando interações realistas e problemas comuns relatados por usuários.</p>
+        
+        <h3>Planejamento de Testes de Interface</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente do Teste</th>
+                    <th>Descrição e Exemplos Práticos</th>
+                    <th>Estados de Interface Críticos</th>
+                    <th>Interações Essenciais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Fluxos Principais</strong></td>
+                    <td>Jornadas essenciais para a conversão (venda) e retenção do usuário.</td>
+                    <td>
+                        • Lista vazia/pesquisa sem resultados.<br>
+                        • Carrinho com itens esgotados.<br>
+                        • Checkout multi-step.
+                    </td>
+                    <td>
+                        • Buscar produtos com filtros.<br>
+                        • Adicionar/remover itens.<br>
+                        • Finalizar pedido.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>2. Fluxos Secundários</strong></td>
+                    <td>Pós-venda, suporte e gerenciamento, cruciais para a confiança.</td>
+                    <td>
+                        • Status "em separação" ou "a caminho".<br>
+                        • Erros de login/cadastro.<br>
+                        • Central de ajuda/Chat.
+                    </td>
+                    <td>
+                        • Rastrear pedido em andamento.<br>
+                        • Entrar em contato com suporte.<br>
+                        • Alterar dados da conta.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>3. Fluxos de Exceção</strong></td>
+                    <td>Situações de falha que causam frustração e abandono.</td>
+                    <td>
+                        • <span class="status-tag">Pagamento recusado</span>.<br>
+                        • Conexão perdida em ação crítica.<br>
+                        • Produto indisponível no checkout.
+                    </td>
+                    <td>
+                        • Tentar usar cupom inválido.<br>
+                        • Simular falha de rede no envio.<br>
+                        • Interagir com botão "esgotado".
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exercicio">
+        <h3>Resumo da Metodologia</h3>
+        <div class="passo">
+            <strong>Objetivo:</strong> Aplicar conceitos teóricos ao contexto prático de plataformas de e-commerce e delivery.
+        </div>
+        <div class="passo">
+            <strong>Foco:</strong> Identificar pontos de atrito na jornada do usuário e garantir a resiliência do sistema diante de erros.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

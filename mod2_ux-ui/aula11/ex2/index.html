@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Pensamento Computacional - User Flow</title>
+
+    <!-- Mermaid -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .mermaid-container {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Exercícios de ARQUITETURA DA INFORMAÇÃO</h1>
+
+    <div class="exercicio">
+        <h2>🗺️ EXERCÍCIO 2: DESENVOLVIMENTO DE USER FLOW</h2>
+        <p><strong>Cenário:</strong> Cadastro em aplicativo de entrega de comida</p>
+        
+        <h3>Definição do Perfil e Objetivos</h3>
+        <div class="passo">
+            <strong>Usuário:</strong> Pessoa com fome, busca praticidade.
+        </div>
+        <div class="passo">
+            <strong>Objetivo:</strong> Cadastrar-se para pedir comida.
+        </div>
+        <div class="passo">
+            <strong>Ponto de Entrada:</strong> Tela inicial do app com botão Criar conta.
+        </div>
+
+        <h3>Pontos de Decisão (Lógica Condicional)</h3>
+        <p>Durante o fluxo, o sistema deve lidar com as escolhas do usuário:</p>
+        <ul>
+            <li>Cadastro com e-mail ou telefone?</li>
+            <li>Incluir endereço agora ou depois?</li>
+            <li>Aceitar notificações promocionais?</li>
+        </ul>
+
+        <!-- USER FLOW -->
+        <h3>Fluxograma Visual (User Flow)</h3>
+        <p>Representação visual do fluxo de cadastro do usuário no aplicativo.</p>
+
+        <div class="mermaid-container">
+            <pre class="mermaid">
+flowchart TD
+    A[Tela inicial do app] --> B[Clicar em Criar conta]
+
+    B --> C{Escolher metodo de cadastro}
+    C -->|Email| D[Inserir email]
+    C -->|Telefone| E[Inserir telefone]
+
+    D --> F[Receber codigo de verificacao]
+    E --> F
+
+    F --> G[Inserir codigo]
+    G --> H[Preencher nome completo]
+    H --> I[Criar senha]
+
+    I --> J{Cadastrar endereco agora}
+    J -->|Sim| K[Inserir endereco]
+    J -->|Nao| L[Pular endereco]
+
+    K --> M{Aceitar notificacoes}
+    L --> M
+
+    M -->|Sim| N[Permitir notificacoes]
+    M -->|Nao| O[Negar notificacoes]
+
+    N --> P[Finalizar cadastro]
+    O --> P
+
+    P --> Q[Conta criada com sucesso]
+    Q --> R[Fazer primeiro pedido]
+            </pre>
+        </div>
+
+        <div class="algoritmo">
+            <h3>Algoritmo do Fluxo (Passo a Passo)</h3>
+            
+            <h4>SEQUÊNCIA DE PASSOS:</h4>
+            <ul>
+                <li><strong>AÇÃO INICIAL:</strong> Toque em Criar conta.</li>
+                <li><strong>IDENTIFICAÇÃO:</strong> Insira número de celular ou e-mail.</li>
+                <li><strong>VALIDAÇÃO:</strong> Receba e insira código de verificação.</li>
+                <li><strong>DADOS PESSOAIS:</strong> Preencha nome completo.</li>
+                <li><strong>SEGURANÇA:</strong> Escolha uma senha.</li>
+                <li><strong>LOCALIZAÇÃO (Opcional):</strong> Cadastre endereço principal.</li>
+                <li><strong>MARKETING (Opcional):</strong> Aceite ofertas promocionais.</li>
+                <li><strong>FINALIZAÇÃO:</strong> Toque em Finalizar cadastro.</li>
+            </ul>
+            
+            <h4>PONTO FINAL (Output):</h4>
+            <p>
+                Tela inicial do app com mensagem
+                <strong>Conta criada com sucesso!</strong>
+                e botão <strong>Fazer primeiro pedido</strong>.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

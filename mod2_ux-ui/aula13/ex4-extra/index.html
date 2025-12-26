@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Práticos de UX e Usabilidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f0f6ff;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Exercícios Práticos de UX, Usabilidade e Design</h1>
+
+    <div class="exercicio">
+        <h2>📘 Exercício Prático 1: Discussão sobre Preparação de Protótipos de Alta Fidelidade</h2>
+
+        <p>
+            Para testar se um usuário consegue encontrar um produto, adicioná-lo ao carrinho e finalizar a compra
+            em menos de 3 minutos, o protótipo de alta fidelidade deve simular fielmente a experiência real.
+            Isso inclui fluxos completos, estados visuais críticos e interações essenciais.
+        </p>
+
+        <h3>Resposta (Exemplo para um e-commerce de roupas como a Zara ou Renner)</h3>
+
+        <h4>Fluxos principais a simular (3-4)</h4>
+        <ul>
+            <li><strong>Busca e filtragem:</strong> Digitar "camiseta branca", aplicar filtros (tamanho, cor) e selecionar um item.</li>
+            <li><strong>Detalhes do produto:</strong> Visualizar imagens, selecionar tamanho, adicionar ao carrinho.</li>
+            <li><strong>Carrinho:</strong> Ajustar quantidades, visualizar o resumo do pedido e prosseguir para o checkout.</li>
+            <li><strong>Checkout:</strong> Inserir endereço, escolher forma de pagamento (ex.: cartão salvo) e confirmar o pedido.</li>
+        </ul>
+
+        <h4>Estados de interface críticos (5-6)</h4>
+        <ul>
+            <li>Lista de produtos (com estados de "carregando" e "sem resultados").</li>
+            <li>Página do produto (com seletor de tamanho/cores e botão "Adicionar ao carrinho").</li>
+            <li>Carrinho vazio vs. carrinho com itens.</li>
+            <li>Modal de adição ao carrinho (confirmação rápida).</li>
+            <li>Checkout passo a passo (com indicador de progresso).</li>
+            <li>Confirmação de pedido (tela de sucesso com número do pedido).</li>
+        </ul>
+
+        <h4>Interações essenciais (4-5)</h4>
+        <ul>
+            <li>Clique/toque em botões críticos (adicionar ao carrinho, finalizar compra).</li>
+            <li>Arrastar para visualizar mais imagens do produto.</li>
+            <li>Digitar nos campos de busca, CEP e dados do cartão.</li>
+            <li>Selecionar opções em filtros, tamanhos e formas de pagamento.</li>
+            <li>Feedback visual imediato (ex.: botão que muda de cor ao ser pressionado).</li>
+        </ul>
+    </div>
+
+    <div class="exercicio">
+        <h2>📘 Exercício Prático 2: Elaboração de Tarefa de Teste de Usabilidade</h2>
+
+        <p>
+            Uma tarefa bem estruturada para um app de delivery deve ser realista e testar o fluxo principal de pedido.
+        </p>
+
+        <h3>Resposta (Exemplo para um app como iFood ou Rappi)</h3>
+
+        <h4>Descrição da Tarefa</h4>
+        <p>
+            "Você acabou de chegar em casa e quer pedir um jantar. Use o aplicativo para encontrar um restaurante
+            que vende pizza, adicione uma pizza média de margherita ao carrinho, aplique um cupom de desconto
+            (se houver) e finalize o pedido até a tela de confirmação."
+        </p>
+
+        <h4>Cenário Contextual</h4>
+        <p>
+            "Você é uma pessoa que mora sozinha no centro da cidade e costuma pedir delivery pelo celular.
+            Hoje está com pressa porque quer jantar em até 40 minutos. Você tem um cupom de R$ 10 de desconto
+            válido para pizzarias."
+        </p>
+
+        <h4>Critério de Sucesso</h4>
+        <p>
+            "O participante deve chegar à tela de confirmação do pedido, com o cupom aplicado e o valor final
+            calculado corretamente, dentro de 5 minutos."
+        </p>
+
+        <h4>Perguntas Pós-Tarefa</h4>
+        <ul>
+            <li>O que você achou do processo de buscar o restaurante e encontrar a pizza desejada?</li>
+            <li>Como foi sua experiência ao tentar aplicar o cupom de desconto? Foi claro o que fazer?</li>
+            <li>Houve algum momento em que você ficou em dúvida ou não soube como prosseguir?</li>
+            <li>O que você mudaria nesse fluxo para torná-lo mais rápido ou fácil?</li>
+        </ul>
+    </div>
+
+    <div class="exercicio">
+        <h2>📘 Exercício Prático 3: Análise de Relatório de Teste e Proposição de Soluções</h2>
+
+        <p>
+            Com base em dados reais de reclamações de usuários do iFood, é possível identificar e priorizar
+            problemas de usabilidade.
+        </p>
+
+        <h3>Parte 1: Matriz de Severidade</h3>
+
+        <table>
+            <tr>
+                <th>Problema Identificado</th>
+                <th>Frequência</th>
+                <th>Impacto no Usuário</th>
+                <th>Severidade (1-5)</th>
+            </tr>
+            <tr>
+                <td>App não abre ou fecha sozinho (instabilidade)</td>
+                <td>Alta</td>
+                <td>Alto</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Dificuldade em aplicar cupons de desconto</td>
+                <td>Alta</td>
+                <td>Alto</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Sistema de ajuda/suporte pouco claro</td>
+                <td>Média</td>
+                <td>Médio</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Erros no cálculo de frete</td>
+                <td>Baixa</td>
+                <td>Médio</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Navegação confusa em promoções</td>
+                <td>Média</td>
+                <td>Baixo</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <h3>Parte 2: Proposição de 3 Soluções de Design</h3>
+
+        <h4>Solução 1 – Para instabilidade do app</h4>
+        <p><strong>Problema:</strong> App não abre ou fecha inesperadamente.</p>
+        <p><strong>Insight do Teste:</strong> Pico de mais de 2.800 reclamações em menos de uma hora.</p>
+        <p><strong>Solução Proposta:</strong> Implementar um mecanismo de fallback automático que carregue uma versão simplificada e estável da interface.</p>
+        <p><strong>Justificativa:</strong> Mantém o usuário conseguindo realizar pedidos mesmo em falhas críticas.</p>
+        <p><strong>Métrica de Sucesso:</strong> Redução de 80% das reclamações em 30 dias.</p>
+
+        <h4>Solução 2 – Para dificuldade com cupons</h4>
+        <p><strong>Problema:</strong> Cupons não são aplicados automaticamente ou não são claros.</p>
+        <p><strong>Insight do Teste:</strong> Usuários relatam necessidade de aplicação manual e falhas no desconto.</p>
+        <p><strong>Solução Proposta:</strong> Aplicação automática do melhor cupom disponível e exibição clara das regras.</p>
+        <p><strong>Justificativa:</strong> Reduz atrito e aumenta transparência.</p>
+        <p><strong>Métrica de Sucesso:</strong> Aumento de 25% no uso de cupons e redução de 50% nas reclamações em 60 dias.</p>
+
+        <h4>Solução 3 – Para sistema de ajuda inadequado</h4>
+        <p><strong>Problema:</strong> Dificuldade em encontrar e entender os canais de suporte.</p>
+        <p><strong>Insight do Teste:</strong> Usuários desistem de pedir ajuda por falta de clareza.</p>
+        <p><strong>Solução Proposta:</strong> Assistente de suporte contextual com botão de ajuda sempre visível.</p>
+        <p><strong>Justificativa:</strong> Oferece ajuda no momento exato da dor do usuário.</p>
+        <p><strong>Métrica de Sucesso:</strong> Aumento de 40% no uso do suporte e melhora de 1,5 ponto no NPS em 90 dias.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

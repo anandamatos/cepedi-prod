@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de UX - Jornada do Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .persona-box {
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .apresentacao {
+            background-color: #f0fff4;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px dashed #28a745;
+            margin-top: 30px;
+        }
+        .apresentacao h3 {
+            color: #28a745;
+            border-bottom-color: #c6f6d5;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Exercícios de UX / Design Thinking</h1>
+
+    <div class="exercicio">
+        <h2>🗺️ EXERCÍCIO 4: MAPEAMENTO DE JORNADA DO USUÁRIO</h2>
+        
+        <div class="persona-box">
+            <strong>Persona:</strong> João Silva | 
+            <strong>Objetivo:</strong> Diagnosticar e praticar suas lacunas em Geometria para a prova.
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Etapa da Jornada</th>
+                    <th>Ações</th>
+                    <th>Pensamentos</th>
+                    <th>Sentimentos</th>
+                    <th>Pontos de Dor</th>
+                    <th>Oportunidades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Definir Meta</strong></td>
+                    <td>Acessa a Khan Academy, navega até o curso de Matemática do 9º ano.</td>
+                    <td>"Preciso treinar geometria, mas não tudo. Só o que eu errei no simulado."</td>
+                    <td style="text-align: center;">😐<br>Determinado</td>
+                    <td>A organização por série/ano é muito ampla; não indica o nível de detalhe necessário.</td>
+                    <td>Oferecer um menu de objetivos: "Preparar para prova X", "Recuperar nota em Y".</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Buscar Conteúdo</strong></td>
+                    <td>Procura a unidade de "Geometria". Clica e vê uma lista longa de tópicos.</td>
+                    <td>"Ufa, achei. Mas são 15 tópicos... Por onde começo?"</td>
+                    <td style="text-align: center;">😐<br>Sobrecarregado</td>
+                    <td>A lista é sequencial e genérica. Falta diagnóstico inicial.</td>
+                    <td>Introduzir o <strong>Teste de Nivelamento Rápido</strong> logo na entrada da unidade.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Tentar Economizar Tempo</strong></td>
+                    <td>Rola a lista e clica em um tópico do meio (ex: "Área de círculos").</td>
+                    <td>"Vou pular o básico. Esse parece importante."</td>
+                    <td style="text-align: center;">😠<br>Frustrado</td>
+                    <td>Medo de pular algo essencial ou perder tempo com o que já sabe.</td>
+                    <td>O teste de nivelamento eliminaria o "adivinhar", guiando o João diretamente.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Engajar no Conteúdo</strong></td>
+                    <td>Assiste a um vídeo e resolve os exercícios do tópico escolhido.</td>
+                    <td>"Até que entendi, mas será que era isso que eu mais precisava?"</td>
+                    <td style="text-align: center;">😐<br>Inseguro</td>
+                    <td>Falta de confirmação de que o esforço está no ponto mais crítico.</td>
+                    <td>Mostrar progresso em um "mapa de competências" que destaca as lacunas restantes.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="apresentacao">
+            <h3>🎤 Pitch de Apresentação (3 minutos)</h3>
+            <p>
+                "A jornada do João mostra que sua maior frustração é a <span class="highlight">incerteza e a sensação de perda de tempo</span> ao navegar por conteúdos extensos. 
+                A <span class="highlight">oportunidade chave</span> está no início: substituir a busca manual por um <strong>diagnóstico automatizado</strong>. 
+                Implementando um teste inicial, transformamos a dúvida em um plano de ação claro. Precisamos tornar as ferramentas de identificação de lacunas a porta de entrada da experiência."
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Pensamento Computacional - Wireframes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .link-prototipo {
+            display: block;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f0fdf4;
+            border: 1px solid #28a745;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .link-prototipo:hover {
+            background-color: #28a745;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Exercícios de Pensamento Computacional</h1>
+
+    <div class="exercicio">
+        <h2>📐 EXERCÍCIO 3: CRIAÇÃO DE WIREFRAMES (BAIXA FIDELIDADE)</h2>
+        <p>Nesta etapa, focamos na <strong>estrutura e funcionalidade</strong> das 3 telas principais da Carteira de Trabalho Digital, abstraindo elementos visuais complexos.</p>
+        
+        
+
+        <h3>1. Tela de Login / Ponto de Entrada</h3>
+        <div class="passo">
+            <strong>Estrutura:</strong> Layout centralizado focado na autenticação do usuário.
+        </div>
+        <div class="passo">
+            <strong>Hierarquia:</strong>
+            <ul>
+                <li>Logo "Carteira de Trabalho Digital".</li>
+                <li>Campo para "CPF" e Campo para "Senha".</li>
+                <li>Botão primário: "Entrar".</li>
+                <li>Links de suporte: "Criar conta Gov.br" e "Esqueci minha senha".</li>
+            </ul>
+        </div>
+        <div class="passo">
+            <strong>Abstração:</strong> Foco total em campos de entrada e botões. Foram excluídas cores, imagens decorativas e sombras.
+        </div>
+
+        <h3>2. Tela Inicial (Dashboard)</h3>
+        <div class="passo">
+            <strong>Estrutura:</strong> Cabeçalho de identificação seguido por um corpo organizado em grid de cards.
+        </div>
+        <div class="passo">
+            <strong>Hierarquia:</strong>
+            <ul>
+                <li><strong>Destaque:</strong> Card "Meu Contrato Atual" (Empresa e Cargo).</li>
+                <li><strong>Serviços:</strong> Cards para "Seguro-Desemprego", "Crédito do Trabalhador" e "Abono Salarial".</li>
+                <li><strong>Navegação:</strong> Barra inferior com ícones (Início, Serviços, Avisos, Perfil).</li>
+            </ul>
+        </div>
+
+        <h3>3. Tela de Detalhes do Contrato</h3>
+        <div class="passo">
+            <strong>Estrutura:</strong> Cabeçalho com navegação de retorno e corpo com lista de dados técnicos.
+        </div>
+        <div class="passo">
+            <strong>Hierarquia:</strong>
+            <ul>
+                <li><strong>Título:</strong> Nome da Empresa em destaque.</li>
+                <li><strong>Dados do Contrato:</strong> Seção com Cargo, Admissão, Salário e Jornada.</li>
+                <li><strong>Registro:</strong> Dados de CTPS e eSocial.</li>
+                <li><strong>Ação:</strong> Botão flutuante para "Compartilhar" ou "Exportar PDF".</li>
+            </ul>
+        </div>
+
+        <div class="algoritmo">
+            <h4>COMPONENTES ESSENCIAIS (Checklist):</h4>
+            <ul>
+                <li>Entradas de texto (Inputs) para dados sensíveis.</li>
+                <li>Botões de ação clara (Primary Buttons).</li>
+                <li>Arquitetura de informação baseada em cards.</li>
+                <li>Sistema de navegação persistente (Tab bar inferior).</li>
+            </ul>
+        </div>
+
+        <a href="https://www.figma.com/make/OdhrHM9vs0JE70cPRgW1G0/Improve-Digital-Work-Card-App--Copy-?fullscreen=1&t=vnyTOUDtigHJZWu3-1" class="link-prototipo" target="_blank">
+            🔗 ACESSAR PROTÓTIPO NO FIGMA
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

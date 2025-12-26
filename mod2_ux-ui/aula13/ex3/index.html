@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Relatório e Priorização</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Análise de Relatório e Priorização</h1>
+
+    <div class="exercicio">
+        <h2>✅ EXERCÍCIO 3: ANÁLISE E MATRIZ DE SEVERIDADE</h2>
+        <p>Com base nas taxas de sucesso fornecidas, os problemas são priorizados utilizando uma <strong>Matriz de Severidade</strong>, que combina a frequência do problema com seu impacto na experiência do usuário.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Problema Identificado</th>
+                    <th>Taxa de Sucesso</th>
+                    <th>Frequência</th>
+                    <th>Impacto</th>
+                    <th>Severidade</th>
+                    <th>Prioridade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Finalizar pedido</strong></td>
+                    <td>45%</td>
+                    <td>Alta (55% falham)</td>
+                    <td>Crítico</td>
+                    <td>Alta Severidade</td>
+                    <td><strong>P1 - Crítico</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Buscar restaurante</strong></td>
+                    <td>60%</td>
+                    <td>Média (40% falham)</td>
+                    <td>Alto</td>
+                    <td>Alta a Média</td>
+                    <td><strong>P2 - Alto</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Adicionar ao carrinho</strong></td>
+                    <td>85%</td>
+                    <td>Baixa (15% falham)</td>
+                    <td>Médio</td>
+                    <td>Baixa Severidade</td>
+                    <td><strong>P3 - Médio</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="exercicio">
+        <h2>🎨 SOLUÇÕES DE DESIGN (PROBLEMA CRÍTICO)</h2>
+        <p>Propostas para resolver a baixa taxa de finalização de pedidos (45%):</p>
+
+        <div class="passo">
+            <strong>1. Checkout em Tela Única:</strong> Reduz a fragmentação e a ansiedade do usuário consolidando revisão, endereço e pagamento. <em>(Ex: Mercado Pago)</em>.
+        </div>
+        <div class="passo">
+            <strong>2. Indicadores de Progresso:</strong> Feedback visual em tempo real com checkmarks e resumo de valores fixo para aumentar a confiança. <em>(Ex: iFood)</em>.
+        </div>
+        <div class="passo">
+            <strong>3. Validação de Endereço Proativa:</strong> Uso de API do Google Maps para autocompletar e validação imediata de cobertura. <em>(Ex: Rappi)</em>.
+        </div>
+    </div>
+
+    <div class="exercicio">
+        <h2>💎 CONCLUSÃO E PRÓXIMOS PASSOS</h2>
+        <p>O ciclo de prototipar, testar e iterar é fundamental para criar produtos eficientes e competitivos.</p>
+
+        <div class="algoritmo">
+            <h4>Sugestões para aprofundar o conhecimento:</h4>
+            <ul>
+                <li><strong>PROTOTIPAR E TESTAR:</strong> Escolha um fluxo na Shopee ou Magalu e esboce melhorias no Figma.</li>
+                <li><strong>ANÁLISE HEURÍSTICA:</strong> Avalie o rastreamento de pedidos em 2 apps diferentes, listando prós e contras.</li>
+                <li><strong>FEEDBACKS REAIS:</strong> Analise críticas de 1 estrela nas lojas de aplicativos para identificar falhas de usabilidade.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

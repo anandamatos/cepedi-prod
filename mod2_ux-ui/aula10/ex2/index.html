@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Cadastro - Carteira Digital</title>
+
+    <!-- Mermaid -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default'
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .mermaid-container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .passo {
+            margin-bottom: 15px;
+        }
+
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+
+        .observacoes ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .observacoes ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .observacoes ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Análise de User Flow: Processo de Cadastro</h1>
+
+    <!-- FLUXOGRAMA -->
+    <div class="exercicio">
+        <h2>Fluxograma Visual (User Flow)</h2>
+        <p>
+            Abaixo está a representação visual do caminho que o usuário (Carlos)
+            percorre desde o download do aplicativo até o objetivo final.
+        </p>
+
+        <div class="mermaid-container">
+            <pre class="mermaid">
+flowchart TD
+    A[Ponto de Entrada<br>Carlos baixa o app] --> B[Tela de Boas-vindas]
+    B --> C{Clica em Acessar}
+    C --> D[Tela de Login]
+    D --> E{Usuario possui conta}
+    E -->|Nao| F[Criar conta GovBR]
+    E -->|Sim| D1[Login existente]
+
+    F --> G{CPF possui pendencias}
+
+    G -->|Sim| H[Erro CPF com pendencias]
+    H --> I[Fluxo interrompido]
+
+    G -->|Nao| J[Verificacao de identidade]
+    J --> K{Metodo de validacao}
+    K --> L[Dados bancarios]
+    K --> M[Codigo via correio]
+    K --> N[Outro metodo]
+
+    L --> O[Criacao de credenciais]
+    M --> O
+    N --> O
+
+    O --> P[Primeiro login no app]
+
+    P --> Q{Solicita permissoes}
+    Q -->|Concede| R[Permissoes ativadas]
+    Q -->|Pula| S[Permissoes adiadas]
+
+    R --> T[Tela de tour]
+    S --> T
+
+    T --> U{Usuario interage}
+    U -->|Visualiza| V[Tour completo]
+    U -->|Pula| W[Pula introducao]
+
+    V --> X[Tela inicial Dashboard]
+    W --> X
+
+    X --> Y[Objetivo final Contratos]
+            </pre>
+        </div>
+    </div>
+
+    <!-- ANÁLISE -->
+    <div class="exercicio">
+        <h2>Análise do Processo</h2>
+        <p>
+            A análise abaixo utiliza conceitos de pensamento computacional
+            para compreender o fluxo de cadastro e seus principais pontos.
+        </p>
+
+        <h3>1. Observações sobre o Fluxo</h3>
+        <div class="observacoes">
+            <ul>
+                <li>
+                    <strong>Pontos críticos:</strong>
+                    A verificação de CPF é o maior gargalo e causa abandono do fluxo.
+                </li>
+                <li>
+                    <strong>Decisões do usuário:</strong>
+                    O usuário escolhe métodos de validação e permissões.
+                </li>
+                <li>
+                    <strong>Caminho ideal vs real:</strong>
+                    O fluxo esperado nem sempre corresponde à experiência real.
+                </li>
+                <li>
+                    <strong>Objetivo final:</strong>
+                    Acesso à área de contratos na carteira digital.
+                </li>
+            </ul>
+        </div>
+
+        <h3>2. Decomposição das Etapas</h3>
+
+        <div class="passo">
+            <strong>Entrada:</strong>
+            Download do aplicativo e acesso inicial.
+        </div>
+
+        <div class="passo">
+            <strong>Validação:</strong>
+            Verificação de CPF e identidade do usuário.
+        </div>
+
+        <div class="passo">
+            <strong>Configuração:</strong>
+            Criação de credenciais e definição de permissões.
+        </div>
+
+        <div class="passo">
+            <strong>Navegação final:</strong>
+            Onboarding (tour) e acesso ao dashboard.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

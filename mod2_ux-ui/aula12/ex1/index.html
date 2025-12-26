@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Acessibilidade Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .checklist {
+            background-color: #f0fdf4;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>🧩 Exercícios de Acessibilidade Web</h1>
+
+    <div class="exercicio">
+        <h2>⌨️ EXERCÍCIO 1: NAVEGAÇÃO POR TECLADO</h2>
+        <p><strong>Objetivo:</strong> Compreender como usuários que dependem de teclado navegam em websites.</p>
+        
+        <h3>Passo a Passo da Execução</h3>
+        <div class="passo"><strong>1.</strong> Abra um website de sua preferência no navegador.</div>
+        <div class="passo"><strong>2.</strong> Solte o mouse! Tente navegar apenas utilizando as seguintes teclas:</div>
+        
+        <div class="algoritmo">
+            <ul>
+                <li><strong>Tab:</strong> Mover para o próximo elemento interativo.</li>
+                <li><strong>Shift + Tab:</strong> Mover para o elemento anterior.</li>
+                <li><strong>Enter:</strong> Ativar um botão ou link.</li>
+                <li><strong>Espaço:</strong> Ativar um botão ou checkbox.</li>
+                <li><strong>Setas:</strong> Navegar dentro de menus ou sliders.</li>
+            </ul>
+        </div>
+
+        <div class="checklist">
+            <h4>🔍 Observações Solicitadas:</h4>
+            <ul>
+                <li>Conseguiu acessar todos os elementos interativos?</li>
+                <li>A ordem de tabulação faz sentido lógico?</li>
+                <li>Há elementos não acessíveis via teclado?</li>
+                <li>O foco visual (contorno) é claro e visível?</li>
+                <li>Existem "armadilhas" onde o foco fica preso?</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="exercicio">
+        <h2>🔍 EXERCÍCIO 2: ANÁLISE DE HTML SEMÂNTICO</h2>
+        <p><strong>Objetivo:</strong> Compreender a importância das tags corretas para tecnologias assistivas.</p>
+
+        <div class="algoritmo">
+            <h4>Procedimento Técnico:</h4>
+            <ul>
+                <li>Abra as ferramentas de desenvolvedor do navegador (tecla <strong>F12</strong>).</li>
+                <li>Vá para a aba <strong>"Elements"</strong> ou <strong>"Inspector"</strong>.</li>
+                <li>Analise a estrutura HTML procurando pelos itens abaixo:</li>
+            </ul>
+        </div>
+
+        <h3>Itens para Documentação:</h3>
+        <div class="passo"><strong>Headings:</strong> Os títulos (h1, h2, etc) estão em ordem hierárquica?</div>
+        <div class="passo"><strong>Landmarks:</strong> Tags como header, nav, main e footer estão presentes?</div>
+        <div class="passo"><strong>Interativos:</strong> Botões e links usam elementos semânticos ou apenas "divs" estilizadas?</div>
+        <div class="passo"><strong>Imagens:</strong> Todas as imagens importantes possuem o atributo <em>alt</em> preenchido?</div>
+        <div class="passo"><strong>Formulários:</strong> Os campos de entrada possuem labels associados corretamente?</div>
+    </div>
+
+    <div class="exercicio">
+        <h2>📊 EXERCÍCIO 3: AVALIAÇÃO COM LIGHTHOUSE</h2>
+        <p><strong>Objetivo:</strong> Analisar um site utilizando uma ferramenta automatizada nativa do navegador.</p>
+
+        <div class="passo"><strong>Sugestões de Sites:</strong> Portais de notícias (G1, Folha), E-commerce (Amazon, Mercado Livre) ou sites governamentais.</div>
+
+        <div class="algoritmo">
+            <h4>Execução:</h4>
+            <ul>
+                <li>No Google Chrome, acesse o site escolhido.</li>
+                <li>Aperte <strong>F12</strong> e clique na aba <strong>Lighthouse</strong>.</li>
+                <li>Selecione apenas a categoria "Acessibilidade" e clique em "Gerar relatório".</li>
+                <li>Observe a pontuação e as sugestões de melhoria.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="exercicio">
+        <h2>🌊 EXERCÍCIO 4: AVALIAÇÃO COM WAVE</h2>
+        <p><strong>Objetivo:</strong> Familiarizar-se com ferramentas visuais de diagnóstico de acessibilidade.</p>
+
+        <div class="passo"><strong>Ferramenta:</strong> Utilize a extensão ou o site oficial do <a href="https://wave.webaim.org/" target="_blank">WAVE (Web Accessibility Evaluation Tool)</a>.</div>
+
+        <div class="checklist">
+            <h4>Análise de Resultados:</h4>
+            <p>Após rodar a ferramenta em um site, responda:</p>
+            <ul>
+                <li>Quantos <strong>erros críticos</strong> (ícones vermelhos) foram encontrados?</li>
+                <li>Quantos <strong>alertas</strong> (ícones amarelos) foram identificados?</li>
+                <li>Quais são as principais categorias de problemas (contraste, falta de alt, etc)?</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

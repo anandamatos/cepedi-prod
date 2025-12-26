@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios – Respostas Aplicadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .ponto-forte { color: #28a745; font-weight: bold; }
+        .ponto-melhoria { color: #d9534f; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>🧩 Exercícios – Respostas Aplicadas</h1>
+
+    <div class="exercicio">
+        <h2>🔍 EXERCÍCIO 1: ANÁLISE DE ARQUITETURA DA INFORMAÇÃO</h2>
+        <p><strong>Aplicativo analisado:</strong> Carteira de Trabalho Digital (gov.br)</p>
+        
+        <h3>1. Organização e categorização do conteúdo</h3>
+        <div class="passo">
+            O conteúdo segue uma estrutura hierárquica típica de serviços governamentais:
+        </div>
+        <div class="algoritmo">
+            <ul>
+                <li><strong>Página Inicial:</strong> Acesso rápido aos serviços principais (emitir CTPS, ver contrato, extrato FGTS, etc.).</li>
+                <li><strong>Menu Lateral:</strong> Categorias estruturadas em “Início”, “Documentos”, “Serviços”, “Notificações” e “Ajuda”.</li>
+                <li><strong>Observação:</strong> Há agrupamento temático, mas com sobrecarga de informações legais e técnicas, o que pode confundir o cidadão comum.</li>
+            </ul>
+        </div>
+
+        <h3>2. Sistemas de navegação identificados</h3>
+        <div class="passo">
+            <strong>Navegação Global:</strong> Uso de menu “hambúrguer” para acesso às seções principais de qualquer ponto do app.
+        </div>
+        <div class="passo">
+            <strong>Navegação Local:</strong> Subtítulos e divisões internas dentro de cada serviço específico.
+        </div>
+        <div class="passo">
+            <strong>Navegação Contextual:</strong> Links relacionados inseridos no corpo da página (ex: “Leia mais sobre seguro-desemprego”).
+        </div>
+        <div class="passo">
+            <strong>Navegação Suplementar:</strong> Rodapé contendo links institucionais como Acessibilidade, Mapa do Site e Órgãos do Governo.
+        </div>
+
+        <h3>3. Rotulagem e busca</h3>
+        <div class="passo">
+            <strong>Rotulagem:</strong> Utiliza termos oficiais e burocráticos (como “CTPS”, “FGTS”, “PIS/PASEP”), porém carece de um glossário integrado para o usuário leigo.
+        </div>
+        <div class="passo">
+            <strong>Busca:</strong> Embora presente no site, a funcionalidade no aplicativo é limitada ou ausente, gerando dificuldade para encontrar serviços específicos.
+        </div>
+
+        <h3>4. Discussão – Pontos fortes e fracos</h3>
+        
+        <h4 class="ponto-forte">O que funciona bem:</h4>
+        <div class="algoritmo">
+            <ul>
+                <li>Estrutura previsível para usuários de outros serviços do ecossistema gov.br.</li>
+                <li>Agrupamento lógico por tipo de documento.</li>
+                <li>Agilidade no acesso através do login único (Gov.br).</li>
+            </ul>
+        </div>
+
+        <h4 class="ponto-melhoria">O que poderia melhorar:</h4>
+        <div class="algoritmo">
+            <ul>
+                <li><strong>Rotulagem amigável:</strong> Traduzir termos técnicos (ex: de “Certidão de Tempo de Contribuição” para “Histórico de Contribuições”).</li>
+                <li><strong>Busca inteligente:</strong> Implementar busca por sinônimos e FAQ dentro do aplicativo.</li>
+                <li><strong>Orientação clara:</strong> Facilitar a localização de itens comuns como 2ª via ou código de validação.</li>
+                <li><strong>Redução de cliques:</strong> Simplificar os fluxos para evitar o excesso de telas na emissão de documentos.</li>
+                <li><strong>Feedback visual:</strong> Indicação clara do status do documento (emitido, pendente ou com erro).</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

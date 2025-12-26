@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Arquitetura da Informação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        .exercicio {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .passo {
+            margin-bottom: 15px;
+        }
+        .passo strong {
+            display: inline-block;
+            background-color: #e6f7ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #0056b3;
+        }
+        .algoritmo ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .algoritmo ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        .algoritmo ul li::before {
+            content: "▶";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <h1>Exercícios de UX & Arquitetura da Informação</h1>
+
+    <div class="exercicio">
+        <h2>🔍 EXERCÍCIO 1: ANÁLISE DE ARQUITETURA DA INFORMAÇÃO</h2>
+        <p><strong>Aplicativo analisado:</strong> Carteira de Trabalho Digital (Gov.br)</p>
+        
+        <h3>1. Organização e Categorização do Conteúdo</h3>
+        <div class="passo">
+            <strong>Estrutura:</strong> O conteúdo está organizado em seções principais: "Contrato de Trabalho", "Seguro-Desemprego", "Abono Salarial", "Crédito do Trabalhador", "Vagas de Emprego" e "Dados Pessoais".
+        </div>
+        <div class="passo">
+            <strong>Lógica:</strong> A categorização segue os benefícios e direitos trabalhistas, agrupando funcionalidades semelhantes. 
+        </div>
+        <div class="passo">
+            <strong>Observação:</strong> A hierarquia nem sempre é clara; funcionalidades críticas como o empréstimo consignado disputam atenção com itens menos utilizados.
+        </div>
+
+        <h3>2. Sistemas de Navegação, Rotulagem e Busca</h3>
+        <div class="passo">
+            <strong>Navegação:</strong> Utiliza menu inferior (tab bar) ou lateral com rótulos diretos como "Início", "Serviços" e "Perfil". A profundidade para certos serviços pode ser excessiva.
+        </div>
+        <div class="passo">
+            <strong>Rotulagem:</strong> Uso de termos técnicos e oficiais como "eSocial" e "Crédito do Trabalhador", o que pode dificultar a intuição de usuários leigos.
+        </div>
+        <div class="passo">
+            <strong>Busca:</strong> O aplicativo carece de um sistema de busca interno robusto, forçando o usuário a depender exclusivamente da navegação hierárquica.
+        </div>
+    </div>
+
+    <div class="exercicio">
+        <h2>💡 DISCUSSÃO E MELHORIAS</h2>
+        <p>Análise crítica sobre o desempenho da plataforma e propostas de otimização.</p>
+
+        <h3>3. Pontos Fortes e Fracos</h3>
+        <ul>
+            <li><strong>Pontos Fortes:</strong> Centralização eficiente de serviços governamentais e organização baseada na "vida laboral" do cidadão.</li>
+            <li><strong>Falhas de Usabilidade:</strong> Relatos frequentes de travamentos e problemas de login, especialmente em períodos de alta demanda.</li>
+            <li><strong>Problemas de Acesso:</strong> Dificuldade técnica de acesso mesmo após procedimentos de reinstalação ou reinicialização.</li>
+            <li><strong>Desalinhamento Escalar:</strong> A arquitetura não escala bem para fluxos de alta demanda, indicando falhas no dimensionamento da informação.</li>
+        </ul>
+
+        <h3>4. Proposta de Melhorias (Algoritmo de Evolução)</h3>
+        <div class="algoritmo">
+            <h4>PLANO DE AÇÃO:</h4>
+            <ul>
+                <li><strong>IMPLEMENTAR BUSCA:</strong> Criar um sistema de busca inteligente indexando todos os benefícios e termos técnicos.</li>
+                <li><strong>REVISAR ROTULAGEM:</strong> Adotar linguagem centrada no objetivo do usuário (ex: "Fazer um Empréstimo").</li>
+                <li><strong>REDESENHAR FLUXOS:</strong> Criar uma "via rápida" na tela inicial para serviços prioritários como o Seguro-Desemprego.</li>
+                <li><strong>AJUDA CONTEXTUAL:</strong> Implementar canais de ajuda (FAQs) dentro de cada seção para evitar a saída do aplicativo.</li>
+            </ul>
+            
+            <h4>RESULTADO ESPERADO:</h4>
+            <p>Uma interface mais resiliente, acessível e intuitiva para o trabalhador brasileiro.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
