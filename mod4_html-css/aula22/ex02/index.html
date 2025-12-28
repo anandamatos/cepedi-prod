@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro - DS Gov.br</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+            max-height: 200px;
+        }
+        
+        .card-header-image {
+            padding: 0;
+            margin: -30px -30px 30px -30px;
+            border: none;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        fieldset {
+            border: 2px solid #ededed;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: #1351b4;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        h2.ds-title {
+            margin-bottom: 25px;
+            color: #1351b4;
+        }
+        
+        .required-label::after {
+            content: " *";
+            color: #d53d3d;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        
+        <div class="br-card card-header-image">
+            <img class="header-image" src="img.jpg" alt="Banner ilustrativo do formulário, seguindo o padrão Gov.br">
+        </div>
+        
+        <h2 class="ds-title">Formulário de Cadastro Completo</h2>
+
+        <form action="/cadastro" method="POST" enctype="multipart/form-data">
+            
+            <!-- SEÇÃO 1: DADOS PESSOAIS -->
+            <fieldset>
+                <legend>1. Dados Pessoais</legend>
+                
+                <div class="form-group">
+                    <div class="br-input">
+                        <label for="nome_completo" class="required-label">Nome Completo</label>
+                        <input type="text" 
+                               id="nome_completo" 
+                               name="nome_completo" 
+                               placeholder="Digite seu nome completo..."
+                               required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="br-input">
+                        <label for="email" class="required-label">E-mail</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="exemplo@email.com"
+                               required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="br-input">
+                        <label for="data_nascimento">Data de Nascimento</label>
+                        <input type="date" 
+                               id="data_nascimento" 
+                               name="data_nascimento">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <p><strong>Gênero:</strong></p>
+                    
+                    <div class="br-radio">
+                        <input id="genero_masculino" type="radio" name="genero" value="masculino"/>
+                        <label for="genero_masculino">Masculino</label>
+                    </div>
+                    
+                    <div class="br-radio">
+                        <input id="genero_feminino" type="radio" name="genero" value="feminino"/>
+                        <label for="genero_feminino">Feminino</label>
+                    </div>
+                    
+                    <div class="br-radio">
+                        <input id="genero_outro" type="radio" name="genero" value="outro"/>
+                        <label for="genero_outro">Outro</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="br-upload">
+                        <label for="foto_perfil">Foto de Perfil</label>
+                        <input type="file" 
+                               id="foto_perfil" 
+                               name="foto_perfil"
+                               accept="image/*">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- SEÇÃO 2: PREFERÊNCIAS E HOBBIES -->
+            <fieldset>
+                <legend>2. Preferências e Hobbies</legend>
+                
+                <div class="form-group">
+                    <p><strong>Escolha seus hobbies:</strong></p>
+                    
+                    <div class="br-checkbox">
+                        <input id="hobby_leitura" type="checkbox" name="hobbies" value="leitura"/>
+                        <label for="hobby_leitura">Leitura</label>
+                    </div>
+                    
+                    <div class="br-checkbox">
+                        <input id="hobby_musica" type="checkbox" name="hobbies" value="musica"/>
+                        <label for="hobby_musica">Música</label>
+                    </div>
+                    
+                    <div class="br-checkbox">
+                        <input id="hobby_esportes" type="checkbox" name="hobbies" value="esportes"/>
+                        <label for="hobby_esportes">Esportes</label>
+                    </div>
+                    
+                    <div class="br-checkbox">
+                        <input id="hobby_jogos" type="checkbox" name="hobbies" value="jogos"/>
+                        <label for="hobby_jogos">Jogos</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cor_favorita"><strong>Cor favorita:</strong></label>
+                    <div class="br-input">
+                        <input type="color" 
+                               id="cor_favorita" 
+                               name="cor_favorita" 
+                               value="#1351b4">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <p><strong><label for="idioma_principal">Idioma que mais usa:</label></strong></p>
+                    <div class="br-select">
+                        <select id="idioma_principal" name="idioma_principal">
+                            <option value="">-- Selecione uma opção --</option>
+                            <option value="portugues">Português</option>
+                            <option value="ingles">Inglês</option>
+                            <option value="espanhol">Espanhol</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- SEÇÃO 3: MENSAGEM -->
+            <fieldset>
+                <legend>3. Mensagem</legend>
+                
+                <div class="form-group">
+                    <div class="br-textarea">
+                        <label for="sobre_voce">Fale um pouco sobre você:</label>
+                        <textarea id="sobre_voce" 
+                                  name="sobre_voce" 
+                                  rows="5" 
+                                  placeholder="Conte sobre suas experiências, objetivos ou interesses..."></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- BOTÕES DE AÇÃO -->
+            <div class="button-group">
+                <button class="br-button primary" type="submit">
+                    Enviar Cadastro
+                </button>
+                <button class="br-button secondary" type="reset">
+                    Limpar Formulário
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+    
+    <script>
+        // Inicialização dos componentes DS Gov.br
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar componentes que precisam de JS
+            const selects = document.querySelectorAll('.br-select');
+            selects.forEach(select => {
+                if (select.classList.contains('br-select')) {
+                    // O DS Gov.br já inicializa automaticamente, mas garantimos
+                    select.setAttribute('data-js', 'select');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

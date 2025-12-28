@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de CSS Grid - DSGov Final Fix</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="br-header">
+            <div class="container-fluid">
+                <div class="header-top">
+                    <div class="header-logo">
+                        <img src="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-positive.png" alt="logo gov.br"/>
+                        <span class="br-divider vertical mx-half mx-sm-1"></span>
+                        <div class="header-sign">Ministério do Estudo</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <aside class="menu-sidebar">
+            <nav class="br-menu push active">
+                <div class="menu-container">
+                    <div class="menu-panel">
+                        <div class="menu-header">
+                            <div class="menu-title"><span>Menu de Navegação</span></div>
+                        </div>
+                        <div class="menu-body">
+                            <a class="menu-item" href="#">
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span class="content">Início</span>
+                            </a>
+                            <a class="menu-item" href="#">
+                                <span class="icon"><i class="fas fa-th"></i></span>
+                                <span class="content">Sobre o Grid</span>
+                            </a>
+                            <a class="menu-item" href="#">
+                                <span class="icon"><i class="fas fa-file-alt"></i></span>
+                                <span class="content">Documentação</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container-fluid">
+                <div class="br-card">
+                    <div class="card-content">
+                        <h2>Conteúdo Principal</h2>
+                        <p>Neste aula, o <strong>Aside</strong> e o <strong>Main</strong> compartilham a mesma linha no Grid.</p>
+                        <div class="br-message info" role="alert">
+                            <div class="icon"><i class="fas fa-info-circle fa-lg"></i></div>
+                            <div class="content">O menu lateral utiliza componentes do Design System para manter a acessibilidade.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="br-footer">
+            <div class="container-lg">
+                <div class="logo">
+                    <img src="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/images/logo-negative.png" alt="Logo"/>
+                </div>
+                <div class="br-list horizontal" role="navigation">
+                    <div class="col-2"><a class="br-item" href="javascript:void(0)" style="color: white !important;">Sobre</a></div>
+                    <div class="col-2"><a class="br-item" href="javascript:void(0)" style="color: white !important;">Contato</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

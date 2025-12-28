@@ -1,0 +1,60 @@
+/* exercicio1-externo.css - Arquivo CSS externo para o Exercício 1 */
+
+/* Reset básico para a lista */
+.lista-estilizada {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.lista-estilizada li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    font-family: 'Rawline', sans-serif;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.lista-estilizada li:hover {
+    background-color: #f0f7ff;
+    border-color: #1351b4;
+    transform: translateX(5px);
+    box-shadow: 0 2px 5px rgba(19, 81, 180, 0.1);
+}
+
+.lista-estilizada li:before {
+    content: "✓";
+    color: #1351b4;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.lista-estilizada li:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.lista-estilizada li:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilo para o contêiner da lista */
+.lista-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+}
+
+.lista-titulo {
+    color: #1351b4;
+    font-family: 'Rawline', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #1351b4;
+}

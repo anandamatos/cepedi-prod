@@ -1,0 +1,114 @@
+/* --- Definição das Cores de Estudo (Roxo e Laranja) --- */
+:root {
+    /* Roxo Escuro para o Container */
+    --flex-container-bg: #800080; 
+    /* Laranja Vivo para os Itens */
+    --flex-item-bg: #ff8c00; 
+}
+
+
+/* --- Estilos do Contêiner (UL) --- */
+.flex-container {
+    /* Base do seu CSS */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    /* Configuração Flexbox moderna */
+    display: flex;
+    
+    /* Aplica o fundo Roxo */
+    background-color: var(--flex-container-bg); 
+
+    /* Estilos Visuais para Estudo */
+    min-height: 150px; /* Altura para ver o wrap-reverse */
+    padding: 10px;
+    margin-bottom: 30px;
+    
+    /* Removendo a borda prata, pois ela não faz parte do visual de estudo. 
+       Se quiser uma borda: border: 1px solid silver; */
+}
+
+/* --- Implementação da Propriedade flex-wrap --- */
+
+.nowrap  { 
+    flex-wrap: nowrap;
+}
+
+.wrap    { 
+    flex-wrap: wrap;
+}  
+
+/* Removendo o .wrap li { background: gold; } para manter a cor laranja padrão */
+
+.wrap-reverse { 
+    flex-wrap: wrap-reverse;
+}  
+
+/* Removendo o .wrap-reverse li { background: deepskyblue; } para manter a cor laranja padrão */
+
+
+/* --- Estilos dos Itens (LI) --- */
+.flex-item {
+    /* Aplica o fundo Laranja */
+    background-color: var(--flex-item-bg);
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    
+    /* Dimensões do seu CSS */
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    line-height: 100px; 
+    
+    /* Estilos extras para visualização clara */
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Estudo da Propriedade justify-content (Alinhamento Horizontal) --- */
+
+/* Usando menos itens para focar no espaço vazio */
+.justify-start,
+.justify-center,
+.justify-end,
+.justify-between,
+.justify-around,
+.justify-evenly {
+    /* Garantir que os itens não quebrem e que haja espaço livre */
+    flex-wrap: nowrap;
+    min-height: 120px; /* Reduz a altura para este exemplo */
+}
+
+/* 4. flex-start (Padrão) */
+.justify-start {
+    justify-content: flex-start;
+}
+
+/* 5. center */
+.justify-center {
+    justify-content: center;
+}
+
+/* 6. flex-end */
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* 7. space-between: Espaço entre itens */
+.justify-between {
+    justify-content: space-between;
+}
+
+/* 8. space-around: Espaço ao redor de cada item (meio espaço nas bordas) */
+.justify-around {
+    justify-content: space-around;
+}
+
+/* 9. space-evenly: Espaço uniforme entre e nas bordas */
+.justify-evenly {
+    justify-content: space-evenly;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - CSS de Três Formas</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2 class="ds-title">👨‍👧‍👦 Exercício 4: Herança e Cascata CSS</h2>
+        
+        <h3>Demonstração dos conceitos:</h3>
+        
+        <!-- ETAPA 1 -->
+        <div class="step-indicator">Etapa 1</div>
+        <div class="demonstration-box div-etapa1">
+            <strong>Div com cor de texto vermelha:</strong>
+            <p>Este parágrafo está DENTRO da div. A cor vermelha é herdada do elemento pai (div).</p>
+        </div>
+        <div class="explanation">
+            <strong>💡 Explicação:</strong> O parágrafo herda a cor <code>red</code> da div porque a propriedade <code>color</code> é herdável.
+        </div>
+        
+        <!-- ETAPA 2 -->
+        <div class="step-indicator mt-4">Etapa 2</div>
+        <div class="demonstration-box">
+            <strong>Adicionada regra p { color: blue; }</strong>
+            <p>Este parágrafo está FORA da div especial. Aplica-se a regra <code>p { color: blue; }</code>.</p>
+        </div>
+        <div class="explanation">
+            <strong>💡 Explicação:</strong> A regra <code>p { color: blue; }</code> é mais específica para parágrafos que a herança da div, então prevalece a cor azul.
+        </div>
+        
+        <!-- ETAPA 3 -->
+        <div class="step-indicator mt-4">Etapa 3</div>
+        <div class="demonstration-box div-etapa3">
+            <strong>Div com !important:</strong>
+            <p>Este parágrafo está DENTRO da div com <code>!important</code>. Mesmo com a regra <code>p { color: blue; }</code>, a cor vermelha prevalece.</p>
+        </div>
+        <div class="explanation">
+            <strong>💡 Explicação:</strong> O <code>!important</code> sobrepõe todas as outras regras de especificidade. Uso deve ser evitado quando possível.
+        </div>
+        
+        <div class="mt-4" style="background-color: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ff9800;">
+            <h4>📚 Regras da Cascata CSS:</h4>
+            <ol>
+                <li><strong>Origem:</strong> Estilo do usuário > !important > Autor > Navegador</li>
+                <li><strong>Especificidade:</strong> ID > Class > Elemento</li>
+                <li><strong>Ordem:</strong> Última regra declarada prevalece</li>
+                <li><strong>Herança:</strong> Algumas propriedades são herdadas pelos filhos</li>
+            </ol>
+        </div>
+        
+        <div class="mt-3">
+            <button class="br-button secondary" onclick="location.href='#'">
+                Voltar
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+    
+    <script>
+        // Inicialização dos componentes DS Gov.br
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar componentes que precisam de JS
+            const selects = document.querySelectorAll('.br-select');
+            selects.forEach(select => {
+                if (select.classList.contains('br-select')) {
+                    // O DS Gov.br já inicializa automaticamente, mas garantimos
+                    select.setAttribute('data-js', 'select');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

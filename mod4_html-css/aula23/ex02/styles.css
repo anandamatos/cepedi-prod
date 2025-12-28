@@ -1,0 +1,61 @@
+/* styles.css - Estilos base mantendo o padrão Gov.br */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-family: 'Rawline', Arial, sans-serif;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.pergunta-grupo {
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.card-header-image {
+    padding: 0;
+    margin: -30px -30px 20px -30px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.br-select {
+    margin-top: 5px;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* Classes utilitárias adicionais */
+.ds-title {
+    color: #1351b4;
+    font-family: 'Rawline', sans-serif;
+    font-weight: 600;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #1351b4;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+}

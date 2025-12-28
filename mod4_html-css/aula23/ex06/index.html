@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Box Model</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        .container-caixas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        /* Estilo base para todas as caixas */
+        .caixa {
+            font-family: 'Rawline', sans-serif;
+            border: 5px solid;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        /* 1. Caixa com content-box (padrão) */
+        .caixa-1 {
+            box-sizing: content-box;
+            width: 200px;
+            padding: 20px;
+            border-color: #1351b4;
+            color: #1351b4;
+        }
+        
+        /* 2. Caixa com border-box */
+        .caixa-2 {
+            box-sizing: border-box;
+            width: 200px;
+            padding: 20px;
+            border-color: #28a745;
+            color: #28a745;
+        }
+        
+        /* 3. Caixa com border-box e unidade relativa */
+        .caixa-3 {
+            box-sizing: border-box;
+            width: 50%;
+            padding: 2rem;
+            margin: 1rem;
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+        
+        .info-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .calculadora {
+            background-color: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            font-family: monospace;
+        }
+        
+        .formula {
+            background-color: #fff3cd;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://picsum.photos/600/200?random=6" alt="Banner ilustrativo" style="width:100%;">
+        </div>
+        
+        <h2 class="ds-title">Exercício 6 - Box Model Prático</h2>
+        <p>Três caixas demonstrando diferentes comportamentos do box model:</p>
+        
+        <div class="container-caixas">
+            <!-- Caixa 1: content-box -->
+            <div class="caixa caixa-1">
+                <h4>Caixa 1</h4>
+                <p>content-box</p>
+                <p>width: 200px</p>
+                <p>padding: 20px</p>
+                <p>border: 5px</p>
+                <div class="formula">
+                    Largura total:<br>
+                    200 + (20×2) + (5×2) = 250px
+                </div>
+            </div>
+            
+            <!-- Caixa 2: border-box -->
+            <div class="caixa caixa-2">
+                <h4>Caixa 2</h4>
+                <p>border-box</p>
+                <p>width: 200px</p>
+                <p>padding: 20px</p>
+                <p>border: 5px</p>
+                <div class="formula">
+                    Largura total:<br>
+                    200px (inclui tudo)
+                </div>
+            </div>
+            
+            <!-- Caixa 3: border-box com unidades relativas -->
+            <div class="caixa caixa-3">
+                <h4>Caixa 3</h4>
+                <p>border-box</p>
+                <p>width: 50%</p>
+                <p>padding: 2rem</p>
+                <p>margin: 1rem</p>
+                <div class="formula">
+                    Largura total:<br>
+                    50% do container pai
+                </div>
+            </div>
+        </div>
+        
+        <div class="calculadora">
+            <h3 class="ds-title">Cálculo das Larguras:</h3>
+            
+            <div class="info-box">
+                <h4>Caixa 1 (content-box - padrão):</h4>
+                <p><strong>Fórmula:</strong> width + padding-left + padding-right + border-left + border-right</p>
+                <p><strong>Cálculo:</strong> 200px + 20px + 20px + 5px + 5px = 250px</p>
+                <p>O padding e border são adicionados à largura especificada</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Caixa 2 (border-box):</h4>
+                <p><strong>Fórmula:</strong> width (inclui padding e border)</p>
+                <p><strong>Cálculo:</strong> 200px (já inclui padding e border)</p>
+                <p>O padding e border são subtraídos da largura especificada</p>
+            </div>
+            
+            <div class="info-box">
+                <h4>Caixa 3 (border-box com %):</h4>
+                <p><strong>Fórmula:</strong> 50% do container pai</p>
+                <p><strong>Cálculo:</strong> 50% de 600px = 300px (aproximado)</p>
+                <p>O padding de 2rem é incluído nos 50% da largura</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h4>Diferenças Principais:</h4>
+            <ul>
+                <li><strong>content-box:</strong> Largura especificada é apenas do conteúdo</li>
+                <li><strong>border-box:</strong> Largura especificada inclui conteúdo, padding e border</li>
+                <li><strong>Unidades relativas (%):</strong> Proporcional ao elemento pai</li>
+                <li><strong>Unidades fixas (px):</strong> Tamanho absoluto</li>
+            </ul>
+        </div>
+        
+        <div class="mt-3">
+            <button class="br-button primary" onclick="medirCaixas()">
+                <i class="fas fa-ruler"></i> Medir Caixas
+            </button>
+            <a href="#" class="br-button secondary">Voltar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+    <script>
+        function medirCaixas() {
+            const caixa1 = document.querySelector('.caixa-1');
+            const caixa2 = document.querySelector('.caixa-2');
+            const caixa3 = document.querySelector('.caixa-3');
+            
+            const largura1 = caixa1.offsetWidth;
+            const largura2 = caixa2.offsetWidth;
+            const largura3 = caixa3.offsetWidth;
+            
+            alert(
+                `Medições das Caixas:\n\n` +
+                `Caixa 1 (content-box): ${largura1}px\n` +
+                `Caixa 2 (border-box): ${largura2}px\n` +
+                `Caixa 3 (50% border-box): ${largura3}px\n\n` +
+                `Obs: A caixa 3 varia conforme a largura da janela.`
+            );
+        }
+    </script>
+</body>
+</html>

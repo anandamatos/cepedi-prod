@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 - Seletores CSS</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        /* Estilos para o exercício de seletores */
+        
+        /* 1. Todos os elementos <p> com classe texto */
+        p.texto {
+            font-family: 'Rawline', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        /* 2. Apenas o elemento com classe destaque */
+        .destaque {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #856404;
+        }
+        
+        /* 3. O elemento com id container */
+        #container {
+            background-color: #f8f9fa;
+            border: 2px solid #1351b4;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        /* 4. Apenas o <li> com classe especial */
+        li.especial {
+            background-color: #1351b4;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+        
+        /* 5. Todos os elementos dentro do div */
+        #container * {
+            box-sizing: border-box;
+        }
+        
+        /* Estilos adicionais para demonstração */
+        .seletor-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .seletor-titulo {
+            color: #1351b4;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .seletor-descricao {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://picsum.photos/600/200?random=2" alt="Banner ilustrativo" style="width:100%;">
+        </div>
+        
+        <h2 class="ds-title">Exercício 2 - Seletores CSS</h2>
+        <p>Demonstração prática de diferentes seletores CSS aplicados ao HTML abaixo:</p>
+        
+        <!-- Demonstração dos seletores -->
+        <div class="seletor-card">
+            <div class="seletor-titulo">Seletor: p.texto</div>
+            <div class="seletor-descricao">Aplica estilo a todos os parágrafos com classe "texto"</div>
+        </div>
+        
+        <div class="seletor-card">
+            <div class="seletor-titulo">Seletor: .destaque</div>
+            <div class="seletor-descricao">Aplica estilo apenas ao elemento com classe "destaque"</div>
+        </div>
+        
+        <div class="seletor-card">
+            <div class="seletor-titulo">Seletor: #container</div>
+            <div class="seletor-descricao">Aplica estilo ao elemento com id "container"</div>
+        </div>
+        
+        <hr>
+        
+        <!-- HTML para aplicar os seletores -->
+        <div id="container">
+            <h1 class="titulo ds-title">Título Principal</h1>
+            <p class="texto destaque">Primeiro parágrafo (com classe .destaque)</p>
+            <p class="texto">Segundo parágrafo (apenas com classe .texto)</p>
+            
+            <h3 class="ds-title">Lista de Itens:</h3>
+            <ul class="br-list">
+                <li>Item 1 (normal)</li>
+                <li class="especial">Item 2 (com classe .especial)</li>
+                <li>Item 3 (normal)</li>
+            </ul>
+        </div>
+        
+        <div class="mt-3">
+            <a href="#" class="br-button primary">Voltar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

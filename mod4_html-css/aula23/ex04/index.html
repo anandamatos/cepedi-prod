@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Estilização de Texto</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        /* Estilos para o artigo de blog */
+        
+        /* 1. Título principal */
+        .titulo-principal {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #1351b4;
+            margin: 2rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #1351b4;
+        }
+        
+        /* 2. Parágrafos */
+        .paragrafo-blog {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+        
+        /* 3. Citações */
+        blockquote {
+            font-style: italic;
+            margin-left: 2em;
+            color: #555;
+            border-left: 4px solid #1351b4;
+            padding-left: 1rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+        
+        /* 4. Links */
+        .link-blog {
+            text-decoration: none;
+            color: #2980B9;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .link-blog:hover {
+            text-decoration: underline;
+            color: #1351b4;
+        }
+        
+        /* Estilos adicionais */
+        .metadata {
+            text-align: center;
+            color: #666;
+            font-family: Arial, sans-serif;
+            margin-bottom: 2rem;
+        }
+        
+        .categoria {
+            background-color: #1351b4;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://picsum.photos/600/200?random=4" alt="Banner ilustrativo" style="width:100%;">
+        </div>
+        
+        <!-- Artigo de Blog -->
+        <article>
+            <!-- 1. Título principal -->
+            <h1 class="titulo-principal">
+                A Importância da Acessibilidade na Web
+            </h1>
+            
+            <div class="metadata">
+                <span class="categoria">Tecnologia</span>
+                <span class="categoria">Acessibilidade</span>
+                <span class="categoria">Desenvolvimento Web</span>
+                <br>
+                <small>Publicado em: 15 de Março de 2024 • Autor: João Silva</small>
+            </div>
+            
+            <!-- 2. Parágrafos -->
+            <p class="paragrafo-blog">
+                A acessibilidade na web não é apenas uma questão de inclusão social, 
+                mas também um aspecto fundamental para o sucesso de qualquer projeto digital. 
+                Quando falamos em tornar a web acessível, estamos nos referindo à criação 
+                de sites e aplicações que podem ser usados por todas as pessoas, 
+                independentemente de suas habilidades ou deficiências.
+            </p>
+            
+            <p class="paragrafo-blog">
+                Segundo as diretrizes do 
+                <a href="#" class="link-blog">WCAG (Web Content Accessibility Guidelines)</a>, 
+                existem quatro princípios básicos que devem ser seguidos: perceptível, 
+                operável, compreensível e robusto. Estes princípios garantem que o 
+                conteúdo seja acessível através de diferentes dispositivos e tecnologias 
+                assistivas.
+            </p>
+            
+            <!-- 3. Citação -->
+            <blockquote>
+                "A web foi concebida para funcionar para todas as pessoas, 
+                independentemente de seu hardware, software, idioma, cultura, 
+                localização ou capacidade física ou mental."
+                <footer>— Tim Berners-Lee, inventor da World Wide Web</footer>
+            </blockquote>
+            
+            <p class="paragrafo-blog">
+                A implementação de práticas de acessibilidade beneficia não apenas 
+                pessoas com deficiências permanentes, mas também aquelas com 
+                limitações temporárias ou situacionais. Por exemplo, alguém 
+                que quebrou o braço, uma pessoa em um ambiente muito iluminado 
+                ou mesmo um usuário com conexão de internet lenta.
+            </p>
+            
+            <p class="paragrafo-blog">
+                Para saber mais sobre como implementar acessibilidade em seus projetos, 
+                visite o <a href="#" class="link-blog">portal do governo brasileiro sobre acessibilidade</a> 
+                ou consulte a <a href="#" class="link-blog">documentação completa do WCAG</a>.
+            </p>
+        </article>
+        
+        <div class="mt-3">
+            <a href="#" class="br-button primary">Ler mais artigos</a>
+            <a href="#" class="br-button secondary">Compartilhar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+:root {
+    --sidebar-width: 260px;
+}
+
+/* 1. Estrutura CSS Grid Layout */
+.grid-container {
+    display: grid;
+    min-height: 100vh;
+    /* Grid padrão (Desktop) */
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "aside  main"
+        "footer footer";
+}
+
+/* 2. Mapeamento das Áreas */
+.br-header   { grid-area: header; }
+.main-content { grid-area: main; padding: 2rem; background-color: var(--gray-4); }
+.menu-sidebar { grid-area: aside; background-color: var(--white); border-right: 1px solid var(--gray-20); }
+
+.br-footer { 
+    grid-area: footer; 
+    background-color: var(--blue-warm-vivid-90) !important; 
+    color: var(--white);
+    padding: 1.5rem 0; /* Padding consistente */
+}
+
+/* 3. Reset Unificado do Menu */
+/* Agrupamos para reduzir repetição de código */
+.menu-sidebar :is(.br-menu, .menu-container, .menu-panel) {
+    display: block !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: var(--blue-warm-vivid-70) !important;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-10);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    background-color: var(--blue-warm-vivid-10);
+}
+
+/* 4. Ajustes Responsivos Otimizados */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+            "header"
+            "aside"
+            "main"
+            "footer";
+    }
+
+    .menu-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-20);
+    }
+
+    .main-content { padding: 1rem; }
+}
+
+
+
+/* Ative a classe 'show-next-grid' no <body> */
+.show-next-grid {
+    position: relative;
+}
+
+.show-next-grid::before {
+    content: "";
+    position: fixed;
+    /* Alinha com o container do conteúdo */
+    inset: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px; /* Largura máxima padrão do Next-DS */
+    pointer-events: none;
+    z-index: 10000;
+    
+    /* CONFIGURAÇÃO DO GRID (Baseado na doc: 12 colunas) */
+    --grid-cols: 12;
+    --grid-gutter: 24px; /* Calha oficial */
+    --grid-color: rgba(255, 0, 0, 0.1); /* Vermelho suave da documentação */
+    
+    /* Gradiente que cria as colunas e os gutters */
+    background-image: repeating-linear-gradient(
+        to right,
+        var(--grid-color),
+        var(--grid-color) calc((100% - (var(--grid-gutter) * (var(--grid-cols) - 1))) / var(--grid-cols)),
+        transparent calc((100% - (var(--grid-gutter) * (var(--grid-cols) - 1))) / var(--grid-cols)),
+        transparent calc((100% - (var(--grid-gutter) * (var(--grid-cols) - 1))) / var(--grid-cols) + var(--grid-gutter))
+    );
+    background-size: 100% 100%;
+}
+
+/* Guias horizontais (Baseline Grid de 8px) */
+.show-next-grid::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.05) 1px, transparent 1px);
+    background-size: 100% 8px; /* Ritmo vertical oficial de 8px */
+}

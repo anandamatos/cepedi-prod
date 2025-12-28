@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Tipos de CSS</title>
+    
+    <!-- CSS Externo (para a lista) -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Design System Gov.br -->
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <!-- CSS Interno (para o parágrafo) -->
+    <style>
+        /* Estilo interno para o parágrafo */
+        .paragrafo-estilizado {
+            font-family: 'Rawline', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1351b4;
+            background-color: #f0f7ff;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 4px solid #1351b4;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://picsum.photos/600/200" alt="Banner ilustrativo" style="width:100%;">
+        </div>
+        
+        <h1 style="
+            /* CSS Inline para o título */
+            color: #1351b4;
+            font-family: 'Rawline', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 2px solid #1351b4;
+            margin-bottom: 2rem;
+        ">
+            Exercício 1 - Tipos de CSS
+        </h1>
+        
+        <p class="paragrafo-estilizado">
+            Este parágrafo está estilizado com CSS interno. Ele demonstra o uso de estilos
+            definidos dentro da tag &lt;style&gt; no cabeçalho do documento. 
+            Observe as propriedades aplicadas: fonte Rawline, cor azul do Gov.br, 
+            fundo claro e borda lateral destacada.
+        </p>
+        
+        <h3 class="ds-title">Lista Estilizada com CSS Externo</h3>
+        
+        <ul class="lista-estilizada">
+            <li>Item 1 - Estilizado com arquivo CSS externo</li>
+            <li>Item 2 - Propriedades definidas em arquivo separado</li>
+            <li>Item 3 - Facilita a manutenção e reutilização</li>
+            <li>Item 4 - Melhor prática para projetos maiores</li>
+        </ul>
+        
+        <div class="mt-3">
+            <a href="#" class="br-button primary">Voltar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

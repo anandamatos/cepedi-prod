@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card de Perfil - DS Gov.br</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: rawline, sans-serif;
+            background-color: #f7f7f7;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+        }
+
+        .profile-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1351b4;
+            flex-shrink: 0; /* Impede que a imagem encolha */
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Desktop: layout em linha */
+        @media (min-width: 768px) {
+            .profile-main {
+                flex-direction: row;
+                align-items: flex-start; /* Alinha ao topo */
+            }
+            
+            .profile-image-container {
+                justify-content: flex-start;
+            }
+            
+            /* Garante que a imagem mantenha seu tamanho */
+            .profile-image-container img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            /* Remove o flex-direction: row do profile-content */
+            /* Mantém como coluna para que botões fiquem abaixo */
+        }
+
+        /* Mobile: layout em coluna */
+        @media (max-width: 767px) {
+            .profile-image {
+                align-self: center;
+            }
+            
+            .profile-actions {
+                flex-direction: column;
+            }
+            
+            .profile-actions .br-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-content">
+            <!-- Imagem à esquerda (mobile: topo) -->
+            <div class="profile-main">
+                <div class="profile-image-container">
+                    <img src="https://picsum.photos/100/100?random=profile" 
+                         alt="Foto de perfil" 
+                         class="profile-image">
+                </div>
+                
+                <!-- Informações à direita (mobile: abaixo da imagem) -->
+                <div class="profile-info">
+                    <h3 class="ds-title">Maria da Silva</h3>
+                    <p class="ds-text mb-1"><strong>Cargo:</strong> Desenvolvedora Front-end</p>
+                    <p class="ds-text mb-2"><strong>Departamento:</strong> Secretaria de Tecnologia</p>
+                    <p class="ds-text">
+                        Profissional com 5 anos de experiência em desenvolvimento web, 
+                        especializada em Design Systems e acessibilidade digital. 
+                        Atualmente trabalhando na modernização de portais governamentais.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Botões de ação alinhados à direita -->
+            <div class="profile-actions">
+                <button class="br-button primary" type="button">
+                    <i class="fas fa-envelope"></i> Contatar
+                </button>
+                <button class="br-button secondary" type="button">
+                    <i class="fas fa-file-alt"></i> Currículo
+                </button>
+                <button class="br-button" type="button">
+                    <i class="fas fa-share-alt"></i> Compartilhar
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

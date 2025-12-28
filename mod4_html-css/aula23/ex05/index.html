@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Unidades de Medida</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        /* Layout Responsivo com diferentes unidades */
+        
+        /* 1. Container principal */
+        .container-principal {
+            width: 90vw;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* 6. Altura do cabeçalho */
+        .cabecalho {
+            height: 80px;
+            background-color: #1351b4;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Rawline', sans-serif;
+        }
+        
+        .conteudo {
+            display: flex;
+            min-height: 400px;
+        }
+        
+        /* 2. Coluna lateral */
+        .coluna-lateral {
+            width: 25%;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-right: 1px solid #ddd;
+        }
+        
+        /* 5. Margens entre elementos */
+        .menu-item {
+            margin-bottom: 2em;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* 3. Conteúdo principal */
+        .conteudo-principal {
+            width: 75%;
+            padding: 1.5rem;
+        }
+        
+        /* 4. Espaçamento interno */
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .rodape {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Estilos informativos */
+        .info-unidade {
+            background-color: #f0f7ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-principal">
+        <!-- 6. Cabeçalho com 80px de altura -->
+        <header class="cabecalho">
+            <div class="logo">
+                <i class="fas fa-ruler-combined"></i> Unidades CSS
+            </div>
+        </header>
+        
+        <div class="conteudo">
+            <!-- 2. Coluna lateral com 25% -->
+            <aside class="coluna-lateral">
+                <h3 class="ds-title">Unidades Utilizadas</h3>
+                
+                <div class="menu-item">
+                    <strong>vw (Viewport Width)</strong>
+                    <p>90vw = 90% da largura da janela</p>
+                </div>
+                
+                <div class="menu-item">
+                    <strong>px (Pixels)</strong>
+                    <p>1200px = largura máxima fixa</p>
+                </div>
+                
+                <div class="menu-item">
+                    <strong>% (Porcentagem)</strong>
+                    <p>25% e 75% = proporções relativas</p>
+                </div>
+                
+                <div class="menu-item">
+                    <strong>rem (Root em)</strong>
+                    <p>1.5rem = 1.5 × tamanho da fonte raiz</p>
+                </div>
+                
+                <div class="menu-item">
+                    <strong>em (em relação ao elemento pai)</strong>
+                    <p>2em = 2 × tamanho da fonte do elemento pai</p>
+                </div>
+            </aside>
+            
+            <!-- 3. Conteúdo principal com 75% -->
+            <main class="conteudo-principal">
+                <h2 class="ds-title">Demonstração de Unidades de Medida CSS</h2>
+                
+                <div class="info-unidade">
+                    <strong>Container Principal:</strong> width: 90vw; max-width: 1200px;
+                </div>
+                
+                <div class="card">
+                    <h3 class="ds-title">Unidades Relativas vs. Absolutas</h3>
+                    <p>
+                        Este layout demonstra o uso de diferentes unidades de medida CSS:
+                    </p>
+                    <ul>
+                        <li><strong>vw (viewport width):</strong> Unidade relativa à largura da janela</li>
+                        <li><strong>px:</strong> Unidade absoluta em pixels</li>
+                        <li><strong>%:</strong> Unidade relativa ao elemento pai</li>
+                        <li><strong>rem:</strong> Relativa ao tamanho da fonte do elemento raiz</li>
+                        <li><strong>em:</strong> Relativa ao tamanho da fonte do elemento pai</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="ds-title">Vantagens das Unidades Relativas</h3>
+                    <p>
+                        Unidades como vw, %, rem e em permitem criar layouts mais flexíveis
+                        e responsivos, que se adaptam melhor a diferentes dispositivos e
+                        preferências do usuário.
+                    </p>
+                </div>
+            </main>
+        </div>
+        
+        <footer class="rodape">
+            <p>Layout responsivo criado com diferentes unidades de medida CSS</p>
+            <p>Redimensione a janela para ver o comportamento responsivo</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

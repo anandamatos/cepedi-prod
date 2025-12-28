@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog sobre tecnologia e desenvolvimento web">
+    <title>TechBlog - O Seu Blog de Tecnologia</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #f7f7f7; 
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0; 
+            object-fit: cover;
+        }
+        .card-header-image {
+            padding: 0;
+            margin: -30px -30px 20px -30px; 
+            border: none;
+            border-radius: 8px 8px 0 0; 
+        }
+        .secao-conteudo {
+            margin-bottom: 24px;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .aside-content {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .conteudo-variado {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #1351b4;
+        }
+        .imagem-conteudo {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: block;
+        }
+        .lista-ingredientes {
+            background-color: #fff8e1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        /* Estilo para a classe "destaque" */
+        .destaque {
+            background-color: #e8f4ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1351b4;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://media.geeksforgeeks.org/wp-content/uploads/20200424201843/W3C.png" alt="Banner ilustrativo TechBlog">
+        </div>
+
+        <!-- 3. Adicione um id="topo" ao elemento <header> -->
+        <header id="topo">
+            <h1 class="br-h1">TechBlog - O Seu Blog de Tecnologia</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="mt-4">
+            <!-- 5. Adicione um atributo data-post-id="42" ao elemento <article> -->
+            <article data-post-id="42">
+                <header class="secao-conteudo">
+                    <h2 class="br-h2">HTML Semântico: A Importância da Estrutura Correta</h2>
+                    <p>
+                        <strong>Por:</strong> Maria Silva | 
+                        <time datetime="2024-01-15">15 de Janeiro de 2024</time>
+                    </p>
+                </header>
+                
+                <section class="secao-conteudo">
+                    <h3 class="br-h3">Introdução</h3>
+                    <!-- 2. Adicione uma class="destaque" a um parágrafo importante -->
+                    <p class="destaque">O HTML semântico é fundamental para a acessibilidade e SEO do seu site. Neste artigo, exploraremos como usar corretamente os elementos semânticos para criar estruturas que não só são visualmente organizadas, mas também semanticamente ricas para navegadores e tecnologias assistivas.</p>
+                </section>
+                
+                <!-- CONTEÚDO VARIADO ADICIONADO -->
+                <div class="conteudo-variado">
+                    <h3 class="br-h3">Conteúdo Adicional: Praticando Elementos HTML</h3>
+                    
+                    <!-- 1. O atributo lang="pt-br" já está aplicado no elemento <html> na linha 1 -->
+                    
+                    <!-- 2. Outro parágrafo com a classe "destaque" (reutilizando a classe) -->
+                    <p class="destaque">Este é um parágrafo de introdução que demonstra o uso da tag &lt;p&gt;. Aqui você pode adicionar texto descritivo sobre qualquer tópico. Neste caso, estamos falando sobre a importância de praticar diferentes elementos HTML para se tornar um desenvolvedor web completo. A prática constante é essencial para dominar as nuances do desenvolvimento front-end.</p>
+                    
+                    <!-- 2. Lista ordenada com 3 passos -->
+                    <h4 class="br-h4 mt-3">Passos para Criar uma Página HTML Básica:</h4>
+                    <ol class="br-list">
+                        <li>Estruturar o documento com as tags básicas: &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt; e &lt;body&gt;</li>
+                        <li>Adicionar metadados importantes no &lt;head&gt;, como charset, viewport e title</li>
+                        <li>Criar o conteúdo semântico no &lt;body&gt; usando elementos como header, main, section e footer</li>
+                    </ol>
+                    
+                    <!-- 3. Lista não ordenada com 3 ingredientes -->
+                    <h4 class="br-h4 mt-3">Itens Essenciais para um Kit do Desenvolvedor Front-end:</h4>
+                    <div class="lista-ingredientes">
+                        <ul class="br-list">
+                            <li>Editor de código (VS Code, Sublime Text ou similar)</li>
+                            <li>Navegador atualizado com ferramentas de desenvolvedor</li>
+                            <li>Paciência e curiosidade para resolver problemas</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 4. Imagem com texto alternativo adequado -->
+                    <h4 class="br-h4 mt-3">Exemplo de Estrutura HTML Semântica:</h4>
+                    <p>Abaixo está um exemplo visual de como uma página HTML semântica é estruturada:</p>
+                    <img 
+                        src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2023/04/semantica-html.jpg" 
+                        alt="Diagrama ilustrativo mostrando a estrutura semântica de uma página HTML com elementos como header, nav, main, article, section, aside e footer organizados visualmente"
+                        class="imagem-conteudo"
+                    >
+                    <p class="text-small mt-1"><em>Imagem ilustrativa da estrutura semântica de uma página web.</em></p>
+                    
+                    <!-- 5. Link externo para o Google -->
+                    <div class="mt-4">
+                        <p>Para aprender mais sobre HTML semântico, visite o site oficial do <br><br>
+                            <a href="https://www.google.com/search?q=html+semantico" target="_blank" rel="noopener noreferrer" class="br-button primary small">
+                                <i class="fas fa-search"></i> Buscar no Google
+                            </a>
+                            <br><br>ou consulte a documentação do 
+                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="_blank" rel="noopener noreferrer">
+                                MDN Web Docs
+                            </a>.
+                        </p>
+                    </div>
+                </div>
+                <!-- FIM DO CONTEÚDO VARIADO -->
+                
+                <section class="secao-conteudo">
+                    <h3 class="br-h3">Elementos Semânticos Básicos</h3>
+                    <p>Os elementos como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;footer&gt;</code> fornecem significado à estrutura do documento...</p>
+                </section>
+                
+                <section class="secao-conteudo">
+                    <h3 class="br-h3">Benefícios do HTML Semântico</h3>
+                    <p>A utilização correta de elementos semânticos melhora a acessibilidade para leitores de tela, otimiza o SEO e facilita a manutenção do código...</p>
+                </section>
+                
+                <section class="secao-conteudo">
+                    <h3 class="br-h3">Conclusão</h3>
+                    <p>Implementar HTML semântico não é apenas uma boa prática, mas uma necessidade para criar sites modernos, acessíveis e bem ranqueados...</p>
+                </section>
+            </article>
+            
+            <aside class="aside-content">
+                <h3 class="br-h4">Artigos Relacionados</h3>
+                <ul class="br-list">
+                    <li><a href="#">CSS Grid vs Flexbox</a></li>
+                    <li><a href="#">Acessibilidade Web</a></li>
+                    <li><a href="#">SEO para Desenvolvedores</a></li>
+                </ul>
+            </aside>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 TechBlog. Todos os direitos reservados.</p>
+            <p>Contato: <a href="mailto:contato@techblog.com">contato@techblog.com</a></p>
+            <!-- 4. Crie um link interno no rodapé que aponte para #topo -->
+            <p>
+                <a href="#topo" class="br-button secondary small">
+                    <i class="fas fa-arrow-up"></i> Voltar ao topo
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

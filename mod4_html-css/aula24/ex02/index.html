@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Horizontal - DS Gov.br</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: rawline, sans-serif;
+            background-color: #f7f7f7;
+            min-height: 100vh;
+        }
+
+        .nav-container {
+            background-color: #1351b4;
+            height: 50px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            padding: 0 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .login-button {
+            margin-left: auto;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-link {
+                padding: 0 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <!-- Logo à esquerda -->
+        <a href="#" class="logo">
+            <i class="fas fa-university mr-2"></i>Gov.br
+        </a>
+        
+        <!-- Links centralizados -->
+        <div class="nav-links">
+            <a href="#" class="nav-link">Início</a>
+            <a href="#" class="nav-link">Serviços</a>
+            <a href="#" class="nav-link">Notícias</a>
+            <a href="#" class="nav-link">Sobre</a>
+            <a href="#" class="nav-link">Contato</a>
+        </div>
+        
+        <!-- Botão de login à direita -->
+        <div class="login-button">
+            <button class="br-button primary small" type="button">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <h2 class="ds-title">Navegação Horizontal</h2>
+        <p>Esta barra de navegação utiliza Flexbox com:</p>
+        <ul>
+            <li>Logo à esquerda</li>
+            <li>Links centralizados</li>
+            <li>Botão de login à direita</li>
+            <li>Todos os itens com altura de 50px</li>
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

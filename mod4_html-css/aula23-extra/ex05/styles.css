@@ -1,0 +1,71 @@
+        body {
+            background-color: #f7f7f7;
+            padding: 40px;
+            font-family: 'Rawline', sans-serif;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Regras do exercício */
+        p { 
+            color: black; 
+            padding: 15px;
+            background-color: #f5f5f5;
+        }
+        
+        .destaque { 
+            color: green; 
+        }
+        
+        #texto { 
+            color: blue; 
+        }
+        
+        p.destaque { 
+            color: yellow; 
+        }
+        
+        .demo-box {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px dashed #ddd;
+        }
+        
+        .result {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            background-color: #e8f5e9;
+            border: 3px solid #4caf50;
+        }
+        
+        .specificity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .specificity-table th, .specificity-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .specificity-table th {
+            background-color: #f5f5f5;
+        }
+        
+        .winner {
+            background-color: #c8e6c9 !important;
+            font-weight: bold;
+        }

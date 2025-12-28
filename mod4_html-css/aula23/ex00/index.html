@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Flexbox: Propriedade flex-wrap (DS Gov.br)</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1 class="ds-title">Estudo de Flexbox: Propriedade flex-wrap</h1>
+        <p>Redimensione a janela do navegador para observar a diferença entre os três modos.</p>
+        
+        <div class="mb-5">
+            <h2>1. flex-wrap: nowrap</h2>
+            <ul class="flex-container nowrap">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>2. flex-wrap: wrap</h2>
+            <ul class="flex-container wrap">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>3. flex-wrap: wrap-reverse</h2>
+            <ul class="flex-container wrap-reverse">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+            </ul>
+        </div>
+        <hr class="mt-5 mb-5">
+        <h1 class="ds-title">Estudo de Flexbox: Propriedade justify-content (Alinhamento Horizontal)</h1>
+        <p>Ajuste a largura do contêiner para observar como os itens são distribuídos no espaço restante.</p>
+        
+        <div class="mb-5">
+            <h2>4. justify-content: flex-start</h2>
+            <ul class="flex-container justify-start">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>5. justify-content: center</h2>
+            <ul class="flex-container justify-center">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>6. justify-content: flex-end</h2>
+            <ul class="flex-container justify-end">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+
+        <div class="mb-5">
+            <h2>7. justify-content: space-between</h2>
+            <ul class="flex-container justify-between">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>8. justify-content: space-around</h2>
+            <ul class="flex-container justify-around">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+        
+        <div class="mb-5">
+            <h2>9. justify-content: space-evenly</h2>
+            <ul class="flex-container justify-evenly">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test Page - DS Gov.br</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #f7f7f7; 
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0; 
+            object-fit: cover;
+        }
+        .card-header-image {
+            padding: 0;
+            margin: -30px -30px 20px -30px; 
+            border: none;
+            border-radius: 8px 8px 0 0; 
+        }
+        /* Estilização para as listas aninhadas seguindo o padrão DS */
+        .lista-compras {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .lista-compras ul {
+            list-style-type: circle;
+            margin-left: 25px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .topo-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1351b4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        
+        <div class="br-card card-header-image">
+            <img class="header-image" src="compras.jpg" alt="Imagem de compras">
+        </div>
+
+        <h1 class="br-h1" id="topo">This is my page</h1>
+
+        <div class="pergunta-grupo">
+            <p>primeiro paragrafo</p>
+            <p>Segundo paragrafo</p>
+        </div>
+
+        <div class="lista-compras">
+            <ol class="br-list">
+                <li>
+                    <span class="text-weight-bold">Carnes</span>
+                    <ul>
+                        <li>Frango</li>
+                        <li>Carne</li>
+                        <li>Peixe</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="text-weight-bold">Verduras</span>
+                    <ul>
+                        <li>Pepino</li>
+                        <li>tomate</li>
+                        <li>Chuchu</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="text-weight-bold">Folhas</span>
+                    <ul>
+                        <li>Espinafre</li>
+                        <li>Couve</li>
+                        <li>Alface</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h2 class="br-h2"></h2>
+        <h3 class="br-h3"></h3>
+        <h2 class="br-h2"></h2>
+
+        <hr>
+
+        <a href="#topo" class="topo-link">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i> topo
+        </a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

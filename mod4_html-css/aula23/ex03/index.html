@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3 - Trabalhando com Cores</title>
+    
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <style>
+        .card-produto {
+            /* 1. Fundo em hsl(200, 70%, 90%) */
+            background-color: hsl(200, 70%, 90%);
+            
+            /* 4. Borda em rgb(52, 152, 219) */
+            border: 2px solid rgb(52, 152, 219);
+            
+            /* 5. Sombra com transparência usando hsla(0, 0%, 0%, 0.1) */
+            box-shadow: 0 4px 12px hsla(0, 0%, 0%, 0.1);
+            
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'Rawline', sans-serif;
+        }
+        
+        .card-titulo {
+            /* 2. Texto do título em hexadecimal #2C3E50 */
+            color: #2C3E50;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .card-descricao {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-preco {
+            /* 3. Preço em rgba(231, 76, 60, 0.9) */
+            color: rgba(231, 76, 60, 0.9);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        
+        .card-info {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .cor-exemplo {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .especificacao-cor {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="br-card card-header-image">
+            <img class="header-image" src="https://picsum.photos/600/200?random=3" alt="Banner ilustrativo" style="width:100%;">
+        </div>
+        
+        <h2 class="ds-title">Exercício 3 - Trabalhando com Cores</h2>
+        <p>Card de produto demonstrando diferentes formatos de cores no CSS:</p>
+        
+        <!-- Especificações das cores usadas -->
+        <div class="card-info">
+            <h4>Especificações de Cores:</h4>
+            
+            <div class="especificacao-cor">
+                <div class="cor-exemplo" style="background-color: hsl(200, 70%, 90%)"></div>
+                <strong>Fundo:</strong> hsl(200, 70%, 90%)
+            </div>
+            
+            <div class="especificacao-cor">
+                <div class="cor-exemplo" style="background-color: #2C3E50"></div>
+                <strong>Título:</strong> Hexadecimal #2C3E50
+            </div>
+            
+            <div class="especificacao-cor">
+                <div class="cor-exemplo" style="background-color: rgba(231, 76, 60, 0.9)"></div>
+                <strong>Preço:</strong> rgba(231, 76, 60, 0.9)
+            </div>
+            
+            <div class="especificacao-cor">
+                <div class="cor-exemplo" style="background-color: rgb(52, 152, 219)"></div>
+                <strong>Borda:</strong> rgb(52, 152, 219)
+            </div>
+            
+            <div class="especificacao-cor">
+                <div class="cor-exemplo" style="background-color: hsla(0, 0%, 0%, 0.1)"></div>
+                <strong>Sombra:</strong> hsla(0, 0%, 0%, 0.1)
+            </div>
+        </div>
+        
+        <!-- Card do produto -->
+        <div class="card-produto">
+            <div class="card-titulo">
+                Smartphone Premium XYZ
+            </div>
+            
+            <div class="card-descricao">
+                Smartphone com tela de 6.7" OLED, processador octa-core, 
+                12GB RAM, 256GB armazenamento, câmera tripla de 108MP, 
+                bateria de 5000mAh e carregamento rápido de 65W.
+            </div>
+            
+            <div class="card-preco">
+                R$ 3.499,90
+            </div>
+            
+            <div class="mt-3">
+                <button class="br-button primary">
+                    <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                </button>
+                <button class="br-button secondary">
+                    <i class="fas fa-heart"></i> Favoritar
+                </button>
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <a href="#" class="br-button primary">Voltar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>

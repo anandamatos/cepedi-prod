@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - CSS de Três Formas</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2 class="ds-title">⚖️ Exercício 5: Especificidade CSS</h2>
+        
+        <h3>Código HTML:</h3>
+        <div class="demo-box">
+            <code>&lt;p id="texto" class="destaque" style="color: pink;"&gt;Texto&lt;/p&gt;</code>
+        </div>
+        
+        <h3>Regras CSS aplicadas:</h3>
+        <div class="demo-box">
+            <pre>
+p { color: black; }                    /* Especificidade: 0,0,1 */
+.destaque { color: green; }            /* Especificidade: 0,1,0 */
+#texto { color: blue; }                /* Especificidade: 1,0,0 */
+p.destaque { color: yellow; }          /* Especificidade: 0,1,1 */
+style="color: pink;"                   /* Especificidade: 1,0,0,0 (inline) */</pre>
+        </div>
+        
+        <h3>Resultado:</h3>
+        <div class="result">
+            <p id="texto" class="destaque" style="color: pink;">Texto</p>
+            <strong>Cor aplicada: ROSA (pink)</strong>
+        </div>
+        
+        <h3>Tabela de Especificidade:</h3>
+        <table class="specificity-table">
+            <thead>
+                <tr>
+                    <th>Seletor</th>
+                    <th>IDs (a)</th>
+                    <th>Classes (b)</th>
+                    <th>Elementos (c)</th>
+                    <th>Especificidade</th>
+                    <th>Vencedor?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>p { color: black; }</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0,0,1</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>.destaque { color: green; }</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0,1,0</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>#texto { color: blue; }</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1,0,0</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>p.destaque { color: yellow; }</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0,1,1</td>
+                    <td>❌</td>
+                </tr>
+                <tr class="winner">
+                    <td>style="color: pink;" (inline)</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1,0,0,0</td>
+                    <td>✅ VENCEDOR</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="explanation mt-4" style="background-color: #e3f2fd; padding: 20px; border-radius: 8px;">
+            <h4>📚 Explicação Detalhada:</h4>
+            <ol>
+                <li><strong>Estilo inline</strong> tem a maior especificidade (1,0,0,0)</li>
+                <li>Mesmo que <code>#texto</code> tenha especificidade 1,0,0, o estilo inline tem precedência</li>
+                <li>A regra <code>p.destaque</code> (0,1,1) perde para <code>#texto</code> (1,0,0)</li>
+                <li>Se removêssemos o estilo inline, a cor seria <strong>AZUL</strong> do seletor <code>#texto</code></li>
+                <li>Sem o ID, a cor seria <strong>AMARELA</strong> do seletor <code>p.destaque</code></li>
+            </ol>
+            
+            <div class="mt-3">
+                <strong>Hierarquia de Especificidade (do maior para menor):</strong><br>
+                1. <code>!important</code><br>
+                2. Estilo inline<br>
+                3. IDs (#id)<br>
+                4. Classes (.classe), pseudo-classes (:hover), atributos<br>
+                5. Elementos (p, div), pseudo-elementos (::before)
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <button class="br-button secondary" onclick="location.href='#'">
+                Voltar
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+    
+    <script>
+        // Inicialização dos componentes DS Gov.br
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar componentes que precisam de JS
+            const selects = document.querySelectorAll('.br-select');
+            selects.forEach(select => {
+                if (select.classList.contains('br-select')) {
+                    // O DS Gov.br já inicializa automaticamente, mas garantimos
+                    select.setAttribute('data-js', 'select');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

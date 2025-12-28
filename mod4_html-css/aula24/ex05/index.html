@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Flexbox - DS Gov.br</title>
+    <link rel="stylesheet" href="https://cdngovbr-ds.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: rawline, sans-serif;
+            background-color: #f7f7f7;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+            gap: 10px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #1351b4;
+            min-width: 150px;
+        }
+
+        .form-control {
+            flex-grow: 1;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Desktop: layout em linha */
+        @media (min-width: 768px) {
+            .form-group {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        /* Mobile: layout em coluna */
+        @media (max-width: 767px) {
+            .form-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .form-label {
+                min-width: auto;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .form-actions .br-button {
+                width: 100%;
+            }
+        }
+
+        /* Garantir que os inputs ocupem espaço disponível */
+        .br-input input {
+            width: 100%;
+        }
+        
+        .br-textarea textarea {
+            width: 100%;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="ds-title">Formulário de Contato</h2>
+        <p class="ds-text mb-4">Entre em contato conosco para mais informações:</p>
+        
+        <form action="/contato" method="POST">
+            <!-- Campo Nome -->
+            <div class="form-group">
+                <label for="nome" class="form-label">Nome completo:</label>
+                <div class="form-control">
+                    <div class="br-input">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campo Email -->
+            <div class="form-group">
+                <label for="email" class="form-label">E-mail:</label>
+                <div class="form-control">
+                    <div class="br-input">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campo Telefone -->
+            <div class="form-group">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <div class="form-control">
+                    <div class="br-input">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campo Assunto -->
+            <div class="form-group">
+                <label for="assunto" class="form-label">Assunto:</label>
+                <div class="form-control">
+                    <div class="br-select">
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="elogio">Elogio</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Campo Mensagem -->
+            <div class="form-group">
+                <label for="mensagem" class="form-label">Mensagem:</label>
+                <div class="form-control">
+                    <div class="br-textarea">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões de ação -->
+            <div class="form-actions">
+                <button class="br-button secondary" type="reset">
+                    Limpar
+                </button>
+                <button class="br-button primary" type="submit">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.7.0/dist/core.min.js"></script>
+</body>
+</html>
