@@ -1,0 +1,39 @@
+// 1. Variáveis e Mapas (Cores Oficiais DSGOV)
+$colors: (
+    "primary": #1351b4,   // Azul União
+    "secondary": #2ecc71, // Verde Sucesso
+    "danger": #e74c3c     // Vermelho Erro
+);
+
+$font-main: 'Rawline', sans-serif;
+$radius: 4px;
+
+// 2. Mixin para evitar repetição
+@mixin btn-style($bg-color) {
+    background-color: $bg-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: $radius;
+    border: none;
+    cursor: pointer;
+    font-family: $font-main;
+    transition: background 0.3s ease;
+
+    &:hover {
+        // Escurece a cor de fundo automaticamente em 10%
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+// 3. Gerando as classes (Refatoração)
+.btn-primary {
+    @include btn-style(map-get($colors, "primary"));
+}
+
+.btn-secondary {
+    @include btn-style(map-get($colors, "secondary"));
+}
+
+.btn-danger {
+    @include btn-style(map-get($colors, "danger"));
+} 

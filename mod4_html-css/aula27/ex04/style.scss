@@ -1,0 +1,48 @@
+// --- DEFINIÇÃO DO MIXIN ---
+@mixin box-style(
+    $bg-color: white, 
+    $border-radius: 4px, 
+    $padding: 16px, 
+    $box-shadow: none
+) {
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    box-shadow: $box-shadow;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; // Borda sutil padrão
+    font-family: sans-serif;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// --- APLICAÇÃO EM TRÊS CARDS DIFERENTES ---
+
+// 1. Card Padrão (usa quase todos os defaults)
+.card-standard {
+    @include box-style();
+}
+
+// 2. Card de Destaque (Azul Gov.br)
+.card-featured {
+    @include box-style(
+        $bg-color: #1351b4, 
+        $padding: 24px, 
+        $box-shadow: 0 4px 10px rgba(0,0,0,0.2)
+    );
+    color: white;
+}
+
+// 3. Card arredondado (Estilo Badge/Alerta)
+.card-rounded {
+    @include box-style(
+        $bg-color: #f2cd44, 
+        $border-radius: 50px, 
+        $padding: 10px 30px
+    );
+    border-color: #d1af37;
+    text-align: center;
+}

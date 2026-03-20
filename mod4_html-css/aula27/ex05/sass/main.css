@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rawline", sans-serif;
+  line-height: 1.6;
+}
+
+.br-button {
+  background: #1351b4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.br-button:hover {
+  filter: brightness(90%);
+}
+
+.main-header {
+  background: #f8f8f8;
+  padding: 20px;
+  border-bottom: 2px solid #1351b4;
+}/*# sourceMappingURL=main.css.map */

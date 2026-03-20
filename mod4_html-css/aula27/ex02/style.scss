@@ -1,0 +1,42 @@
+// Variáveis básicas para manter o padrão DSGOV
+$blue-gov: #1351b4;
+$gray-light: #f8f8f8;
+$yellow-focus: #f2cd44;
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .menu-item {
+            // Estilização do link dentro do item
+            a {
+                display: block;
+                padding: 1.5rem 1rem;
+                color: $blue-gov;
+                text-decoration: none;
+                transition: all 0.2s;
+
+                // O '&' aqui referencia o 'a' (a:hover)
+                &:hover {
+                    background-color: $gray-light;
+                    color: darken($blue-gov, 15%);
+                }
+            }
+
+            // O '&' aqui referencia o '.menu-item' (.menu-item--active)
+            &--active {
+                a {
+                    font-weight: bold;
+                    border-bottom: 4px solid $yellow-focus;
+                }
+            }
+        }
+    }
+}

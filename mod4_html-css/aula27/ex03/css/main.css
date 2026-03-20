@@ -1,0 +1,35 @@
+/* 1. RESET (Vindo do _reset.scss) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rawline', sans-serif;
+  background-color: #fff;
+}
+
+/* 2. COMPONENTES (Vindo do _buttons.scss que usou o Mixin) */
+.br-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1351b4;
+  color: #ffffff;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.br-button:hover {
+  background-color: #0b2e67; /* Gerado pelo darken($blue-union, 10%) */
+}
+
+/* 3. LAYOUT (Vindo do final do main.scss) */
+.container {
+  padding: 50px;
+  text-align: center;
+}

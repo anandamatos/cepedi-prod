@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rawline", sans-serif;
+  background-color: #fff;
+}
+
+.br-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1351b4;
+  color: #ffffff;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.br-button:hover {
+  background-color: rgb(14.1306532663, 60.2412060302, 133.8693467337);
+}
+
+.container {
+  padding: 50px;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

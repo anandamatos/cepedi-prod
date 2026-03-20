@@ -1,0 +1,21 @@
+.br-card {
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-family: "Rawline", "Raleway", Arial, sans-serif;
+  max-width: 300px;
+}
+.br-card .br-button {
+  background-color: #1351b4;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.br-card .br-button:hover {
+  background-color: #0c326d;
+}/*# sourceMappingURL=style.css.map */

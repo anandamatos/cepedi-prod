@@ -1,0 +1,25 @@
+@import 'variables';
+
+.br-card {
+    background-color: $secondary-color;
+    padding: $base-padding;
+    border-radius: $border-radius-base;
+    border: 1px solid #ddd;
+    font-family: $font-main;
+    max-width: 300px;
+    
+    .br-button {
+        background-color: $primary-color;
+        color: white;
+        padding: ($base-padding / 2) $base-padding;
+        border: none;
+        border-radius: 100px; // Botões DSGOV costumam ser bem arredondados
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+    }
+}

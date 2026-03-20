@@ -1,0 +1,8 @@
+.br-button {
+    background: $blue-gov;
+    color: $white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    &:hover { filter: brightness(90%); }
+}

@@ -1,0 +1,20 @@
+@mixin btn-base($bg) {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: $bg;
+    color: $white;
+    border-radius: 100px; // Padrão arredondado DSGOV
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: darken($bg, 10%);
+    }
+}
+
+.br-button {
+    @include btn-base($blue-union);
+}

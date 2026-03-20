@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main; // Note que ele já reconhecerá a variável após o import
+    background-color: #fff;
+}

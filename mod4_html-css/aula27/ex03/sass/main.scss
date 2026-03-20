@@ -1,0 +1,10 @@
+// Importação dos Partials
+@import 'variables';
+@import 'reset';
+@import 'buttons';
+
+// Estilo extra apenas para o layout do exercício
+.container {
+    padding: 50px;
+    text-align: center;
+}
