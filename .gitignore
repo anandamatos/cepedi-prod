@@ -1,3 +1,32 @@
-public/FETCH_HEAD
-._*
+# Dependências (Ignora em qualquer nível do projeto)
+node_modules/
+**/node_modules/
+package-lock.json
+mod5_react/package-lock.json
+
+# Builds e pacotes
+build/
+dist/
+.pnp
+.pnp.js
+
+# Arquivos de Sistema (Muito importante para Mac/iMac)
 .DS_Store
+.DS_Store?
+._*
+**/.DS_Store
+**/.DS_Store?
+**/._*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

@@ -4,6 +4,7 @@ import '@govbr-ds/core/dist/core.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Importação das aulas
+import Aula28 from './Aulas/Aula28';
 import Aula29 from './Aulas/Aula29';
 import Aula30 from './Aulas/Aula30';
 import Aula31 from './Aulas/Aula31';
@@ -43,6 +44,7 @@ function App() {
                     value={aulaAtiva} 
                     onChange={(e) => setAulaAtiva(e.target.value)}
                   >
+                    <option value="28">Aula 28: Estilização (CSS/Styled/Tailwind)</option>
                     <option value="29">Aula 29: Fundamentos</option>
                     <option value="30">Aula 30: Props e Estado</option>
                     <option value="31">Aula 31: useEffect</option>
@@ -56,6 +58,7 @@ function App() {
         </header>
 
         <main className="container-lg">
+          {aulaAtiva === '28' && <Aula28 />}
           {aulaAtiva === '29' && <Aula29 />}
           {aulaAtiva === '30' && <Aula30 />}
           {aulaAtiva === '31' && <Aula31 />}
