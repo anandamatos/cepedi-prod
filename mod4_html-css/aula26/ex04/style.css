@@ -1,0 +1,109 @@
+:root {
+    --blue-gov: #1351b4;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    overflow: hidden; /* Evita scroll durante a animação de entrada */
+}
+
+/* --- 1. LAYOUT E ENTRADA ANIMADA --- */
+.product-card {
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    font-family: sans-serif;
+    
+    /* Animação de Entrada: deslizar + fade */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFade 0.8s ease-out forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 2. HOVER INTERATIVO (IMAGEM) --- */
+.card-image {
+    overflow: hidden; /* Garante que a imagem não saia do card ao crescer */
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-card:hover .card-image img {
+    transform: scale(1.08); /* Aumento leve conforme enunciado */
+}
+
+/* --- 3. CONTEÚDO E BOTÃO DESLIZANTE --- */
+.card-content {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    background: var(--blue-gov);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    /* Estado inicial: escondido para baixo */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover .btn-buy {
+    /* Revela o botão ao passar o mouse no card */
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- EXERCÍCIO 4: ACESSIBILIDADE --- */
+
+@media (prefers-reduced-motion: reduce) {
+    /* 1. Removemos a animação de entrada do card */
+    .product-card {
+        animation: none;
+        opacity: 1;           /* Garante que o card esteja visível */
+        transform: none;      /* Remove o deslocamento inicial */
+    }
+
+    /* 2. Simplificamos o Hover da Imagem */
+    /* Em vez de crescer (scale), apenas mantemos estática ou mudamos levemente o brilho */
+    .product-card:hover .card-image img {
+        transform: none;
+        filter: brightness(1.1); 
+    }
+
+    /* 3. Botão de Comprar: Removemos o deslize (translateY) */
+    .btn-buy {
+        transition: none;     /* Mudança instantânea de cor/opacidade */
+        transform: none;      /* Já nasce na posição final */
+    }
+
+    .product-card:hover .btn-buy {
+        transform: none;
+        opacity: 1;
+        background-color: var(--blue-hover);
+    }
+}

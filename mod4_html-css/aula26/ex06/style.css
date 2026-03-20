@@ -1,0 +1,67 @@
+:root {
+    --blue-gov: #1351b4;
+    --transition-speed: 0.4s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background-color: #f8f8f8;
+    font-family: 'Rawline', sans-serif;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative; /* Necessário para o posicionamento do sublinhado */
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+/* --- 1. O SUBLINHADO ANIMADO (Pseudo-elemento) --- */
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Começa com largura zero */
+    height: 3px;
+    background-color: var(--blue-gov);
+    
+    /* Transição suave de largura */
+    transition: width var(--transition-speed) cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.menu-item a:hover::after {
+    width: 100%; /* Expande até preencher tudo */
+}
+
+/* --- 2. EFEITO NOS ÍCONES (translateX) --- */
+.icon {
+    display: inline-block;
+    transition: transform 0.3s ease-out; /* Timing function diferente do sublinhado */
+}
+
+.menu-item a:hover .icon {
+    /* Desliza levemente para a direita ao passar o mouse */
+    transform: translateX(5px);
+}
+
+/* --- 3. EFEITO NO TEXTO --- */
+.text {
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover .text {
+    color: var(--blue-gov);
+}

@@ -1,0 +1,52 @@
+:root {
+    --blue-union: #1351b4;
+    --blue-hover: #0c326d;
+    --shadow-standard: 0 3px 6px rgba(0,0,0,0.16);
+    --shadow-hover: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.br-button {
+    /* Estado Inicial (Sólido) */
+    background-color: var(--blue-union);
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 100px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: var(--shadow-standard);
+    
+    /* PROPRIEDADE CHAVE: Transição suave */
+    /* background-color, transform e box-shadow com ease-out */
+    transition: 
+        background-color 0.2s ease-out, 
+        transform 0.2s ease-out, 
+        box-shadow 0.2s ease-out;
+}
+
+.br-button:hover {
+    /* 1. Mudar cor */
+    background-color: var(--blue-hover);
+    
+    /* 2. Aumentar levemente (Scale) */
+    /* 1.05 é o ideal para não 'estourar' o layout */
+    transform: scale(1.05);
+    
+    /* 3. Ganhar sombra profunda */
+    box-shadow: var(--shadow-hover);
+}
+
+.br-button:active {
+    /* Efeito de clique: 'afunda' levemente */
+    transform: scale(0.98);
+}

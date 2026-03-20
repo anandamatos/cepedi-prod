@@ -1,0 +1,76 @@
+:root {
+    --transition-speed: 0.8s;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease-in-out;
+    z-index: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Setas */
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.arrow {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background: rgba(19, 81, 180, 0.8); /* Azul Gov.br */
+    transform: scale(1.1);
+}
+
+.arrow:focus {
+    outline: 3px solid #f2cd44;
+}
