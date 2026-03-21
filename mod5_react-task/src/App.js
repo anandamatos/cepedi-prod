@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import UserCard from './components/UserCard';
 import ProjectList from './components/ProjectList';
