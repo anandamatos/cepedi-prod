@@ -1,0 +1,57 @@
+/* Importando fontes que mimetizam o padrão Rawline/Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --blue-gov: #1351b4;
+  --green-gov: #168821;
+  --red-gov: #E52207;
+  --gray-light: #F8F9FA;
+  --gray-medium: #E6E6E6;
+  --gray-dark: #333333;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #EDEDED;
+  color: var(--gray-dark);
+}
+
+* { box-sizing: border-box; transition: all 0.2s ease-in-out; }
+
+/* Botões Padrão Premium */
+.btn-gov {
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
+.btn-primary { background: var(--blue-gov); color: white; }
+.btn-primary:hover { background: #0c3d8f; }
+
+.btn-outline { 
+  background: transparent; 
+  border: 1px solid var(--blue-gov); 
+  color: var(--blue-gov); 
+}
+
+/* Inputs Refinados */
+input {
+  height: 44px;
+  border: 1px solid var(--gray-medium);
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blue-gov);
+  box-shadow: 0 0 0 2px rgba(19, 81, 180, 0.2);
+}
