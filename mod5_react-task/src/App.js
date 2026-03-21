@@ -1,3 +1,4 @@
+import React, { useState } from 'react'; // O useState PRECISA estar dentro das chaves
 import Header from './components/Header';
 import UserCard from './components/UserCard';
 import ProjectList from './components/ProjectList';
